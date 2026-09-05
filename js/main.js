@@ -34,7 +34,7 @@
   }
 
   /* ---------------- Scroll reveal ---------------- */
-  var revealEls = document.querySelectorAll('.stat-card, .diag-card, .cap-card, .layer, .vert-card, .flow-step, .sdk-code, .price-card, .res-step, .socratic-card, .capability-quicklist');
+  var revealEls = document.querySelectorAll('.stat-card, .diag-card, .cap-card, .layer, .vert-card, .fieldnote-card, .flow-step, .sdk-code, .price-card, .res-step, .socratic-card, .capability-quicklist');
 
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {

@@ -536,6 +536,67 @@ main > section { padding: clamp(4rem, 9vw, 6.5rem) 0; }
   color: var(--gold-light);
 }
 
+/* ============ FIELD NOTES ============ */
+.fieldnote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.4rem;
+}
+.fieldnote-card {
+  background: var(--navy2);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.fieldnote-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(10, 15, 35, 0.35);
+  border-color: rgba(212, 175, 55, 0.45);
+}
+.fieldnote-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+.fieldnote-body {
+  padding: 1.1rem 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.fieldnote-series {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+.fieldnote-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.18rem;
+  color: var(--peach);
+  line-height: 1.2;
+}
+.fieldnote-vert {
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+.fieldnote-blurb {
+  font-size: 0.86rem;
+  color: var(--dust);
+  line-height: 1.55;
+}
+.fieldnote-cta {
+  margin-top: 2.2rem;
+  text-align: center;
+}
+
 /* ============ PARTNER SDK ============ */
 .sdk-grid {
   display: grid;
