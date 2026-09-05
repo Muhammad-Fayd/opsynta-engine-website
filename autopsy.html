@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Process Autopsy — Opsynta Engine</title>
+  <meta name="description" content="Run the Opsynta Process Autopsy. Seven questions to map the friction in your operations and surface which capability would close it first." />
+  <meta property="og:title" content="Process Autopsy — Opsynta Engine" />
+  <meta property="og:description" content="Seven questions. One Operational Debt Score. The weakest primitive in your operations, surfaced. Map first. Deploy second." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%230A0F23'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%23D4AF37'/%3E%3Cellipse cx='32' cy='32' rx='26' ry='10' fill='none' stroke='%23FAE4CF' stroke-width='2' transform='rotate(30 32 32)'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo-chip" href="index.html" aria-label="Opsynta Engine home">
+        <svg class="logo-mark" viewBox="0 0 40 40" role="img" aria-hidden="true">
+          <defs>
+            <radialGradient id="sphereGrad" cx="35%" cy="30%" r="75%">
+              <stop offset="0%" stop-color="#F5E6C8"/>
+              <stop offset="45%" stop-color="#D4AF37"/>
+              <stop offset="100%" stop-color="#8C6D1F"/>
+            </radialGradient>
+          </defs>
+          <circle cx="20" cy="20" r="17" fill="url(#sphereGrad)"/>
+          <ellipse cx="20" cy="20" rx="15" ry="6" fill="none" stroke="#0A0F23" stroke-width="1.4" transform="rotate(28 20 20)" opacity="0.55"/>
+          <ellipse cx="20" cy="20" rx="15" ry="6" fill="none" stroke="#0A0F23" stroke-width="1.4" transform="rotate(-52 20 20)" opacity="0.35"/>
+          <circle cx="13" cy="12" r="3.2" fill="#FAE4CF" opacity="0.9"/>
+        </svg>
+        <span class="logo-word">OPSYNTA</span>
+      </a>
+      <p class="header-slogan slogan">If your process can be <strong class="accent-peach">mapped</strong>, it will be made <strong class="accent-peach">autonomous</strong>.</p>
+      <nav class="main-nav" id="mainNav" aria-label="Primary">
+        <a href="index.html#reframe">The Reframe</a>
+        <a href="index.html#capabilities">Capabilities</a>
+        <a href="index.html#architecture">Architecture</a>
+        <a href="index.html#industries">Verticals</a>
+        <a href="index.html#sdk">Partner SDK</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a class="btn btn-gold btn-sm" href="index.html#contact">Map a Process</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ AUTOPSY HERO ============ -->
+    <section class="hero light" id="autopsy">
+      <div class="container">
+        <p class="eyebrow"><span class="pill">OPSYNTA · The Process Autopsy</span><span class="pill-meta gold">7 Questions · 3 Minutes</span></p>
+        <h1 class="display">Map the friction. <span class="gold">Then name the fix.</span></h1>
+        <p class="lead">You already know the seams — the spreadsheets someone maintains by hand, the meeting where numbers get read aloud, the person whose phone is the incident system. This autopsy asks the seven questions that locate them, then maps the answers against the six primitives to surface <strong>the weakest link in your operations</strong>.</p>
+        <div class="hero-cta autopsy-hero-cta">
+          <button class="btn btn-gold" id="startAutopsy">Start the Autopsy</button>
+          <a class="btn btn-outline" href="index.html#capabilities">See the Six Capabilities</a>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card"><p class="stat-tag">Your questions</p><p class="stat-number">7<span></span></p><p class="stat-label">about handoffs, meetings, and tribal knowledge</p></div>
+          <div class="stat-card"><p class="stat-tag">The output</p><p class="stat-number gold">1<span></span></p><p class="stat-label">Operational Debt Score, mapped to all six primitives</p></div>
+          <div class="stat-card"><p class="stat-tag">The weakest link</p><p class="stat-number">01<span></span></p><p class="stat-label">primitive surfaced — with a one-line diagnosis and fix</p></div>
+        </div>
+        <p class="hero-manifesto slogan slogan-dark">If your process can be <strong class="gold">mapped</strong>, it will be made <strong class="gold">autonomous</strong>.</p>
+      </div>
+    </section>
+
+    <!-- ============ QUIZ ============ -->
+    <section class="dark autopsy-section" id="quiz">
+      <div class="container">
+        <div class="quiz-shell" id="quizShell">
+          <div class="quiz-progress">
+            <p class="quiz-progress-label mono" id="quizProgressLabel">Question 1 of 7</p>
+            <div class="quiz-progress-track"><div class="quiz-progress-fill" id="quizProgressFill"></div></div>
+          </div>
+
+          <div class="quiz-step" id="quizStep" aria-live="polite">
+            <p class="quiz-q mono" id="quizTag"></p>
+            <h2 class="quiz-q-text" id="quizQuestion"></h2>
+            <div class="quiz-options" id="quizOptions" role="radiogroup"></div>
+          </div>
+
+          <div class="quiz-nav">
+            <button class="btn btn-outline" id="quizBack" type="button">Back</button>
+            <button class="btn btn-gold" id="quizNext" type="button" disabled>Next</button>
+          </div>
+        </div>
+
+        <!-- ============ RESULT ============ -->
+        <div class="quiz-result" id="quizResult" hidden>
+          <div class="result-top">
+            <div class="result-score-wrap">
+              <p class="quiz-q mono">Your Operational Debt Score</p>
+              <p class="result-score" id="resultScore">0</p>
+              <p class="result-band" id="resultBand"></p>
+            </div>
+            <div class="result-summary">
+              <p class="quiz-q mono">The weakest primitive</p>
+              <h3 class="result-weak" id="resultWeak"></h3>
+              <p class="result-diagnosis" id="resultDiagnosis"></p>
+            </div>
+          </div>
+
+          <div class="result-bars" id="resultBars"></div>
+
+          <div class="result-fix">
+            <p class="quiz-q mono">Where autonomy is lost first</p>
+            <h3 class="result-fix-title">Now you know what the map has to fix.</h3>
+            <p class="result-fix-body" id="resultFix"></p>
+          </div>
+
+          <div class="result-contact">
+            <p class="result-contact-line">Email this map to Muhammad — the founder reads every autopsy directly. It arrives pre-tagged with the post you came from.</p>
+            <div class="contact-actions">
+              <a class="btn btn-gold" id="emailLink" href="#">Email your map to Muhammad</a>
+              <a class="btn btn-outline" id="waLink" href="#" target="_blank" rel="noopener">WhatsApp the Score · 01152701025</a>
+            </div>
+          </div>
+
+          <div class="result-footer-note">
+            <p class="mono small-mono">Map first. Deploy second.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a class="logo-chip" href="index.html" aria-label="Opsynta Engine home">
+          <svg class="logo-mark" viewBox="0 0 40 40" role="img" aria-hidden="true">
+            <defs>
+              <radialGradient id="sphereGradF" cx="35%" cy="30%" r="75%">
+                <stop offset="0%" stop-color="#F5E6C8"/>
+                <stop offset="45%" stop-color="#D4AF37"/>
+                <stop offset="100%" stop-color="#8C6D1F"/>
+              </radialGradient>
+            </defs>
+            <circle cx="20" cy="20" r="17" fill="url(#sphereGradF)"/>
+            <ellipse cx="20" cy="20" rx="15" ry="6" fill="none" stroke="#0A0F23" stroke-width="1.4" transform="rotate(28 20 20)" opacity="0.55"/>
+            <ellipse cx="20" cy="20" rx="15" ry="6" fill="none" stroke="#0A0F23" stroke-width="1.4" transform="rotate(-52 20 20)" opacity="0.35"/>
+            <circle cx="13" cy="12" r="3.2" fill="#FAE4CF" opacity="0.9"/>
+          </svg>
+          <span class="logo-word">OPSYNTA</span>
+        </a>
+        <p class="footer-slogan slogan">If your process can be <strong class="accent-peach">mapped</strong>, it will be made <strong class="accent-peach">autonomous</strong>.</p>
+      </div>
+      <div class="footer-sig">
+        <div class="sig-name">
+          <p class="sig-person">Muhammad Fayd</p>
+          <p class="sig-role">Founder · Opsynta Engine</p>
+        </div>
+        <div class="sig-col">
+          <p class="sig-label">Email</p>
+          <p class="sig-value mono"><a href="mailto:mohamed.fayd5589@gmail.com">mohamed.fayd5589@gmail.com</a></p>
+        </div>
+        <div class="sig-col">
+          <p class="sig-label">Mobile · WhatsApp</p>
+          <p class="sig-value mono gold"><a href="https://wa.me/201152701025" target="_blank" rel="noopener">01152701025</a></p>
+        </div>
+      </div>
+      <div class="footer-manifesto slogan">If your process can be <strong class="accent-peach">mapped</strong>, it will be made <strong class="accent-peach">autonomous</strong>.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/utm.js"></script>
+  <script src="js/autopsy.js"></script>
+</body>
+</html>
