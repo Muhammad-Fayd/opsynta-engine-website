@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Opsynta Cycle — Opsynta Engine</title>
+  <meta name="description" content="The rung between a one-shot diagnostic and a fractional hire. A monthly friction pulse, a one-page report, and two working calls — so an AI operation doesn't decay between instruments. $1,500/month." />
+  <meta property="og:title" content="The Opsynta Cycle — Opsynta Engine" />
+  <meta property="og:description" content="The retained rung: a monthly friction pulse, a one-page friction report, two working calls, and a $500/month credit toward a fresh Deep Map each quarter. $1,500/month. Four clients at launch." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%230A0F23'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%23D4AF37'/%3E%3Cellipse cx='32' cy='32' rx='26' ry='10' fill='none' stroke='%23FAE4CF' stroke-width='2' transform='rotate(30 32 32)'/%3E%3C/svg%3E" />
+  <style>
+    /* ============ DUSK ATLAS — self-contained (no stylesheet dependency) ============ */
+    :root {
+      --navy: #0A0F23; --panel: #0E1530; --panel-2: #101938;
+      --peach: #FAE4CF; --peach-dim: rgba(250,228,207,.62); --peach-faint: rgba(250,228,207,.38);
+      --gold: #D4AF37; --gold-dim: rgba(212,175,55,.16); --gold-bright: #E8C558;
+      --cyan: #00C2FF; --cyan-dim: rgba(0,194,255,.12);
+      --line: rgba(212,175,55,.18); --line-soft: rgba(250,228,207,.10);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "Inter", -apple-system, "Segoe UI", Arial, sans-serif;
+      --mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--navy); color: var(--peach); font-family: var(--sans); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    a { color: var(--cyan); text-decoration: none; }
+    .mono { font-family: var(--mono); }
+    .gold { color: var(--gold); }
+    .section { padding: 84px 0; border-top: 1px solid var(--line-soft); }
+    .section-tag { font-family: var(--mono); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    h2.display { font-family: var(--serif); font-weight: 700; font-size: clamp(30px, 4.4vw, 44px); line-height: 1.14; letter-spacing: .01em; margin-bottom: 18px; }
+    .lead { color: var(--peach-dim); font-size: 18px; max-width: 760px; }
+    .lead strong, .body-copy strong { color: var(--peach); font-weight: 600; }
+
+    /* ---------- header ---------- */
+    .dm-header { border-bottom: 1px solid var(--line-soft); background: rgba(10,15,35,.92); position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); }
+    .dm-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 0; }
+    .logo-chip { display: flex; align-items: center; gap: 11px; }
+    .logo-mark { width: 34px; height: 34px; }
+    .logo-word { font-family: var(--mono); font-weight: 600; letter-spacing: .26em; font-size: 15px; color: var(--peach); }
+    .dm-nav { display: flex; gap: 22px; align-items: center; font-size: 14px; }
+    .dm-nav a { color: var(--peach-dim); }
+    .dm-nav a:hover { color: var(--peach); }
+    .dm-nav a.active { color: var(--gold); }
+    @media (max-width: 720px) { .dm-nav { display: none; } }
+
+    /* ---------- hero ---------- */
+    .hero { padding: 96px 0 84px; background:
+      radial-gradient(1100px 520px at 78% -8%, rgba(0,194,255,.07), transparent 60%),
+      radial-gradient(900px 480px at 8% 6%, rgba(212,175,55,.08), transparent 55%); }
+    .eyebrow { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
+    .pill { font-family: var(--mono); font-size: 11.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--gold-dim); background: var(--gold-dim); padding: 7px 13px; border-radius: 999px; }
+    .pill-meta { color: var(--peach-dim); border-color: var(--line-soft); background: rgba(250,228,207,.05); }
+    h1.hero-title { font-family: var(--serif); font-weight: 800; font-size: clamp(38px, 6vw, 62px); line-height: 1.08; letter-spacing: .005em; margin-bottom: 22px; }
+    .hero-title em { font-style: italic; color: var(--gold); }
+    .score-line { font-family: var(--mono); font-size: 13px; color: var(--cyan); border-left: 2px solid var(--cyan-dim); padding: 6px 0 6px 14px; margin: 18px 0 4px; display: none; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin: 34px 0 10px; }
+    .btn { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 15px; padding: 14px 26px; border-radius: 10px; border: 1px solid transparent; cursor: pointer; }
+    .btn-gold { background: linear-gradient(160deg, var(--gold-bright), var(--gold)); color: #0A0F23; box-shadow: 0 12px 34px rgba(212,175,55,.22); }
+    .btn-gold:hover { filter: brightness(1.06); }
+    .btn-outline { border-color: var(--line); color: var(--peach); background: rgba(250,228,207,.03); }
+    .btn-outline:hover { border-color: var(--gold); }
+    .hero-capacity { font-family: var(--mono); font-size: 12.5px; color: var(--peach-faint); margin-top: 16px; }
+    .hero-capacity b { color: var(--gold); font-weight: 600; }
+
+    /* ---------- stats band ---------- */
+    .stats-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 42px; }
+    .stat-card { background: var(--panel); border: 1px solid var(--line-soft); border-radius: 12px; padding: 22px 24px; }
+    .stat-number { font-family: var(--mono); font-size: 34px; font-weight: 600; color: var(--gold); line-height: 1.1; }
+    .stat-label { font-size: 13px; color: var(--peach-dim); margin-top: 8px; }
+    .stat-src { font-family: var(--mono); font-size: 10.5px; color: var(--peach-faint); margin-top: 10px; letter-spacing: .04em; }
+    @media (max-width: 820px) { .stats-band { grid-template-columns: 1fr; } }
+
+    /* ---------- deliverables ---------- */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 820px) { .grid-2 { grid-template-columns: 1fr; } }
+    .deliv-card { background: var(--panel); border: 1px solid var(--line-soft); border-radius: 14px; padding: 28px; }
+    .deliv-num { font-family: var(--mono); font-size: 12px; color: var(--cyan); letter-spacing: .14em; margin-bottom: 10px; }
+    .deliv-card h3 { font-family: var(--serif); font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+    .deliv-card p { color: var(--peach-dim); font-size: 15px; }
+    .deliv-card p strong { color: var(--peach); }
+
+    /* ---------- monthly rhythm ---------- */
+    .day-row { display: grid; grid-template-columns: 150px 1fr; gap: 22px; padding: 20px 0; border-bottom: 1px solid var(--line-soft); }
+    .day-row:last-child { border-bottom: none; }
+    .day-tag { font-family: var(--mono); color: var(--gold); font-size: 14px; letter-spacing: .08em; }
+    .day-body h4 { font-size: 16.5px; font-weight: 600; color: var(--peach); }
+    .day-body p { color: var(--peach-dim); font-size: 14.5px; margin-top: 4px; }
+    @media (max-width: 640px) { .day-row { grid-template-columns: 1fr; gap: 6px; } }
+
+    /* ---------- pricing ---------- */
+    .price-panel { background: linear-gradient(165deg, var(--panel-2), var(--panel)); border: 1px solid var(--line); border-radius: 18px; padding: 42px; margin-top: 26px; }
+    .price-figure { font-family: var(--mono); font-size: 56px; font-weight: 600; color: var(--gold); line-height: 1; }
+    .price-figure span { font-size: 18px; color: var(--peach-dim); font-weight: 400; }
+    .price-cols { display: grid; grid-template-columns: 1.2fr 1fr; gap: 34px; margin-top: 22px; }
+    @media (max-width: 820px) { .price-cols { grid-template-columns: 1fr; } .price-panel { padding: 30px 24px; } }
+    .price-notes { list-style: none; }
+    .price-notes li { padding: 11px 0 11px 26px; position: relative; color: var(--peach-dim); font-size: 15px; border-bottom: 1px solid var(--line-soft); }
+    .price-notes li:last-child { border-bottom: none; }
+    .price-notes li::before { content: "→"; position: absolute; left: 0; color: var(--gold); font-family: var(--mono); }
+    .price-notes li strong { color: var(--peach); }
+    .price-anchor { background: var(--cyan-dim); border: 1px solid rgba(0,194,255,.25); border-radius: 12px; padding: 20px 22px; font-size: 14px; color: var(--peach-dim); align-self: start; }
+    .price-anchor .mono { color: var(--cyan); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; display: block; margin-bottom: 8px; }
+    .price-anchor strong { color: var(--peach); }
+
+    /* ---------- listing rows ---------- */
+    .vert-row { display: grid; grid-template-columns: 190px 1fr; gap: 20px; padding: 17px 0; border-bottom: 1px solid var(--line-soft); align-items: baseline; }
+    .vert-row:last-child { border-bottom: none; }
+    .vert-name { font-family: var(--mono); font-size: 13px; color: var(--gold); letter-spacing: .1em; text-transform: uppercase; }
+    .vert-seam { color: var(--peach-dim); font-size: 15px; }
+    .vert-seam strong { color: var(--peach); }
+    @media (max-width: 640px) { .vert-row { grid-template-columns: 1fr; gap: 4px; } }
+
+    /* ---------- founder ---------- */
+    .founder-note { max-width: 780px; border-left: 2px solid var(--gold); padding: 8px 0 8px 26px; }
+    .founder-note p { font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--peach-dim); margin-bottom: 16px; }
+    .founder-sig { font-family: var(--mono); font-size: 13px; color: var(--gold); letter-spacing: .1em; }
+
+    /* ---------- FAQ ---------- */
+    .faq-item { border-bottom: 1px solid var(--line-soft); }
+    .faq-item summary { cursor: pointer; padding: 20px 0; font-size: 17px; font-weight: 600; color: var(--peach); list-style: none; display: flex; justify-content: space-between; gap: 18px; }
+    .faq-item summary::after { content: "+"; font-family: var(--mono); color: var(--gold); font-size: 18px; }
+    .faq-item[open] summary::after { content: "–"; }
+    .faq-item .faq-a { padding: 0 0 22px; color: var(--peach-dim); font-size: 15px; max-width: 820px; }
+    .faq-item .faq-a strong { color: var(--peach); }
+
+    /* ---------- final CTA ---------- */
+    .final-cta { text-align: center; padding: 96px 0; background:
+      radial-gradient(760px 360px at 50% 110%, rgba(212,175,55,.10), transparent 65%); }
+    .final-cta h2 { font-family: var(--serif); font-size: clamp(30px, 4.6vw, 46px); font-weight: 700; margin-bottom: 16px; }
+    .final-cta p { color: var(--peach-dim); max-width: 620px; margin: 0 auto 30px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .slot-line { font-family: var(--mono); font-size: 12.5px; color: var(--peach-faint); margin-top: 22px; }
+    .slot-line b { color: var(--gold); }
+
+    /* ---------- footer ---------- */
+    .dm-footer { border-top: 1px solid var(--line-soft); padding: 40px 0 48px; }
+    .dm-footer .container { display: flex; flex-wrap: wrap; gap: 26px; justify-content: space-between; align-items: center; }
+    .footer-slogan { font-size: 13.5px; color: var(--peach-faint); }
+    .footer-slogan strong { color: var(--peach-dim); }
+    .sig-name { font-family: var(--mono); font-size: 12.5px; line-height: 1.7; color: var(--peach-faint); }
+    .sig-name .peach-strong { color: var(--peach-dim); font-weight: 600; }
+    .sig-name a { color: var(--cyan); }
+    .sig-name .gold-tel { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="dm-header">
+    <div class="container dm-header-inner">
+      <a class="logo-chip" href="index.html" aria-label="Opsynta Engine home">
+        <svg class="logo-mark" viewBox="0 0 40 40" role="img" aria-hidden="true">
+          <defs>
+            <radialGradient id="sphereGradOC" cx="35%" cy="30%" r="75%">
+              <stop offset="0%" stop-color="#F5E6C8"/>
+              <stop offset="45%" stop-color="#D4AF37"/>
+              <stop offset="100%" stop-color="#8C6D1F"/>
+            </radialGradient>
+          </defs>
+          <circle cx="20" cy="20" r="17" fill="url(#sphereGradOC)"/>
+          <ellipse cx="20" cy="20" rx="15" ry="6" fill="none" stroke="#0A0F23" stroke-width="1.4" transform="rotate(28 20 20)" opacity="0.55"/>
+          <ellipse cx="20" cy="20" rx="15" ry="6" fill="none" stroke="#0A0F23" stroke-width="1.4" transform="rotate(-52 20 20)" opacity="0.35"/>
+          <circle cx="13" cy="12" r="3.2" fill="#FAE4CF" opacity="0.9"/>
+        </svg>
+        <span class="logo-word">OPSYNTA</span>
+      </a>
+      <nav class="dm-nav" aria-label="Opsynta Cycle">
+        <a href="autopsy.html">The Process Autopsy</a>
+        <a href="deepmap.html">The Deep Map</a>
+        <a href="pilot_autopsy.html">The Pilot Autopsy</a>
+        <a href="opsynta_cycle.html" class="active">The Opsynta Cycle</a>
+        <a href="index.html#pricing">Pricing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">
+          <span class="pill">Opsynta · The Cycle</span>
+          <span class="pill pill-meta">Retained · monthly</span>
+          <span class="pill pill-meta">$1,500/mo · 3-month minimum</span>
+        </p>
+        <h1 class="hero-title">AI operations decay between diagnoses.<br /><em>The Cycle mops up the drift.</em></h1>
+        <p class="lead">The gap in the market isn't a missing service — it's a missing <strong>rung</strong>. Below the one-shot diagnostics there is nothing, and above them a fractional hire costs more than most operations justify. The Cycle is the retained rung: a <strong>monthly friction pulse</strong>, a <strong>one-page friction report</strong>, and <strong>two working calls</strong> — enough instrumented attention that an operation decays less between the big instruments, and enough structure that the next Deep Map is cheaper than the last one.</p>
+        <p class="score-line mono" id="scoreLine"></p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="mailto:mohamed.fayd5589@gmail.com?subject=The%20Opsynta%20Cycle&body=Hi%20Muhammad%2C%0A%0AWe%20want%20the%20retained%20rung.%0A%0ACompany%3A%20%20%20%20%20%20%20%20%20%20%20%20%20what%20we%27ve%20already%20run%2Frun%20a%20diagnostic%20on%3A%0AWould%20start%20on%3A%20%20%20%20%20%20%20%20ideally%20next%20month%3F%0A%0A%E2%80%94%20%5Bname%5D">Reserve a lane</a>
+          <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp · 01152701025</a>
+        </div>
+        <p class="hero-capacity">Four clients at launch. Honestly — that's the cap. Next lane opens <b id="nextSlot">Monday</b>.</p>
+      </div>
+    </section>
+
+    <!-- ============ THE RUNG ============ -->
+    <section class="section" id="question">
+      <div class="container">
+        <p class="section-tag">The missing rung</p>
+        <h2 class="display">Every offer on this site is a picture. The Cycle is the video.</h2>
+        <p class="lead body-copy" style="margin-bottom: 8px;">One-shot diagnostics render a state: this is how your operation looks this week. The businesses that keep running it learn the same lesson the audits teach — the state decays. Prompt changes, model changes, staffing changes, data drift all move the map, quietly, in between instruments. The clients who bought one diagnostic buy the next one two quarters later, pay again for the full job, and start the week from a map that has quietly gone stale.</p>
+        <div class="stats-band">
+          <div class="stat-card">
+            <p class="stat-number">$1,500<span style="font-size:18px;">/mo</span></p>
+            <p class="stat-label">a price an operations owner can own without a budget carve-out — and enough metal to keep the map honest between the big instruments</p>
+            <p class="stat-src">3-month minimum · cancel at the quarter</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-number">2h</p>
+            <p class="stat-label">instrumented pulse per month — the same seam-by-seam check the Deep Map performs, compressed into a standing appointment</p>
+            <p class="stat-src">the monthly friction pulse</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-number">$500</p>
+            <p class="stat-label">per month credited toward a fresh Deep Map each quarter — the re-render is priced in before the map goes stale, not after</p>
+            <p class="stat-src">credit applies to the full diagnostic, not a fraction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT'S IN THE LANE ============ -->
+    <section class="section" id="deliverables">
+      <div class="container">
+        <p class="section-tag">What the lane holds</p>
+        <h2 class="display">Enough to hold the map. Nothing more.</h2>
+        <p class="lead body-copy" style="margin-bottom: 30px;">Four standing pieces of the month. Deliberately small — the Cycle is the rung, not the service above it.</p>
+        <div class="grid-2">
+          <div class="deliv-card">
+            <p class="deliv-num">01 · THE FRICTION PULSE</p>
+            <h3>Two hours, instrumented</h3>
+            <p>A monthly seat at the operation: the seams re-checked, the moving parts re-measured, the drift since last month named. <strong>Small enough to be honest, regular enough to matter.</strong></p>
+          </div>
+          <div class="deliv-card">
+            <p class="deliv-num">02 · THE ONE-PAGE REPORT</p>
+            <h3>Friction, and where</h3>
+            <p>A single page each month: what moved, what didn't, what's compounding, what should. The format is fixed because the format is the discipline.</p>
+          </div>
+          <div class="deliv-card">
+            <p class="deliv-num">03 · TWO WORKING CALLS</p>
+            <h3>One lens, twice a month</h3>
+            <p>The same lens on the operation, twice a month — with the optional invite for whoever recently built or broke something on it. The calls are where the pulse becomes dialogue.</p>
+          </div>
+          <div class="deliv-card">
+            <p class="deliv-num">04 · THE QUARTERLY RE-REnder</p>
+            <h3>A fresh map, discounted</h3>
+            <p>A <strong>$500/month credit</strong> toward a fresh Deep Map each quarter — the re-render priced in before the map goes stale, not after.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THE MONTH ============ -->
+    <section class="section" id="process">
+      <div class="container">
+        <p class="section-tag">The monthly rhythm</p>
+        <h2 class="display">Two scheduled touchpoints. One standing instrument.</h2>
+        <div style="margin-top: 26px;">
+          <div class="day-row">
+            <p class="day-tag">WEEK 01</p>
+            <div class="day-body">
+              <h4>Working call — the lens</h4>
+              <p>The month's focus set from the last report: what's compounding, what someone's building, what changed since the quarter began.</p>
+            </div>
+          </div>
+          <div class="day-row">
+            <p class="day-tag">WEEK 02</p>
+            <div class="day-body">
+              <h4>The friction pulse</h4>
+              <p>The two-hour instrumented check: seams re-measured, drift named, the one-page report written against last month's baseline.</p>
+            </div>
+          </div>
+          <div class="day-row">
+            <p class="day-tag">WEEK 03</p>
+            <div class="day-body">
+              <h4>Working call — the report</h4>
+              <p>The report walked through: what moved, what to leave, what to touch, and the standing question about the next Deep Map credit.</p>
+            </div>
+          </div>
+          <div class="day-row">
+            <p class="day-tag">WEEK 04</p>
+            <div class="day-body">
+              <h4>Closed (quietly)</h4>
+              <p>Keep the lane: nothing scheduled, the door open, the credit tracking toward the quarterly re-render.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section" id="price">
+      <div class="container">
+        <p class="section-tag">One rung · one price · one quarter minimum</p>
+        <h2 class="display">$1,500 a month. Priced to hold, not to impress.</h2>
+        <div class="price-panel">
+          <p class="price-figure">$1,500 <span>per month · 3-month minimum</span></p>
+          <div class="price-cols">
+            <ul class="price-notes">
+              <li><strong>Four clients at launch, and that's the honest cap.</strong> The pulse is the founder's instrument, and depth is the product; ditching it for scale is the one betrayal that kills the whole offer.</li>
+              <li><strong>The $500 quarterly Deep Map credit is a credit, not a discount on nothing</strong> — it only exists if you use it, and it makes the re-render the cheaper option by design.</li>
+              <li><strong>Quarters, not forever.</strong> Three-month minimum, renews at the quarter, cancels at the quarter. The map keeps its value because the relationship is re-up, not autopilot.</li>
+              <li><strong>If a diagnostic in the line-up is bought, the Cycle credit compounds toward it too</strong> — the rung is the standing discount on everything above it.</li>
+              <li>Month one in advance. The lane is yours from the first pulse.</li>
+            </ul>
+            <aside class="price-anchor">
+              <span class="mono">The alternative</span>
+              A fractional hire — <strong>$3,000–$8,000 a month</strong> for attention spread across your organization. Or nothing, which is what most operations run between diagnoses: two quarters of quiet drift, then a full-price Deep Map to re-find the map you already paid to draw. This rung exists so the second read is <strong>cheaper and faster than the first</strong>, not a full re-buy.
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOUNDER NOTE ============ -->
+    <section class="section" id="founder">
+      <div class="container">
+        <div class="founder-note">
+          <p>Every one-shot I deliver ends the same way: the client re-reads the map six months later and asks why the seams moved. Nothing about the operation was broken — it was just alive, and life drifts.</p>
+          <p>The Cycle is the honest version of that conversation. Not a retainer tower of reports — a standing instrument, a one-page pulse, two calls, and a discount on the next real look. Four lanes at launch, on purpose. The rung's value is depth, and depth is capped at the founder's load.</p>
+          <p class="founder-sig">MUHAMMAD FAYD · FOUNDER, OPSYNTA ENGINE</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <p class="section-tag">Before you reserve a lane</p>
+        <h2 class="display">Asked on every call.</h2>
+        <div style="margin-top: 22px;">
+          <details class="faq-item">
+            <summary>Isn't this just a retainer?</summary>
+            <p class="faq-a">Structurally yes, behaviorally no. It's a retainer with a fixed instrument (the pulse), a fixed artifact (the one-page report), and two calls — deliberately bounded. The point is that a map you paid for doesn't quietly go stale; the offer is specifically small enough that it stays a rung instead of growing into a tower.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why four clients at launch?</summary>
+            <p class="faq-a">The pulse is performed by the founder — the same person who runs every Deep Map, Pilot Autopsy, and Agent Autopsy. Depth is the product. Scaling the lane by diluting the instrument would kill the very thing the Cycle sells.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Who is this actually for?</summary>
+            <p class="faq-a">Operations owners who have been through at least one diagnostic — usually the Deep Map or a Pilot Autopsy — and know the difference between a drawn map and a maintained one. If you haven't run an instrument, the Cycle is the wrong first purchase; start with the Deep Map.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How does the $500 quarterly credit work?</summary>
+            <p class="faq-a">Every quarter you're in the lane, you accrue a $500 credit toward a fresh Deep Map. Three clean quarters is a $1,500 re-render for the price of one. The credit only exists if you use it — it's a standing incentive to re-instrument, not a loyalty treat.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if the pulse finds nothing?</summary>
+            <p class="faq-a">Then the one-page report says "nothing worth touching this month," and that becomes the baseline against which next month's drift is measured. The quiet months are product too — they're what makes the loud ones legible.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="final-cta" id="book">
+      <div class="container">
+        <h2>Reserve a lane.</h2>
+        <p>Tell us what you've run, what the map currently shows, and when you want to start. If the Cycle is the wrong rung for you, the founder will point you at the right one for free — that's also part of the offer.</p>
+        <div class="cta-row">
+          <a class="btn btn-gold" href="mailto:mohamed.fayd5589@gmail.com?subject=The%20Opsynta%20Cycle&body=Hi%20Muhammad%2C%0A%0AWe%20want%20the%20retained%20rung.%0A%0ACompany%3A%20%20%20%20%20%20%20%20%20%20%20%20%20what%20we%27ve%20already%20run%2Frun%20a%20diagnostic%20on%3A%0AWould%20start%20on%3A%20%20%20%20%20%20%20%20ideally%20next%20month%3F%0A%0A%E2%80%94%20%5Bname%5D">Reserve a lane</a>
+          <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp · 01152701025</a>
+        </div>
+        <p class="slot-line">$1,500/MO · 3-MONTH MINIMUM · 4 CLIENTS AT LAUNCH · Next lane opens <b id="slotLine">Monday</b></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="dm-footer">
+    <div class="container">
+      <p class="footer-slogan">Maps go stale. <strong>Keep them alive.</strong></p>
+      <div class="sig-name">
+        <p><span class="peach-strong">Muhammad Fayd</span> · Founder, Opsynta Engine</p>
+        <p><a href="mailto:mohamed.fayd5589@gmail.com">mohamed.fayd5589@gmail.com</a> · <a class="gold-tel" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp 01152701025</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/utm.js"></script>
+  <script>
+    // ---- personalization: forwarded from quiz results / DM links ----
+    (function () {
+      var q = {};
+      try {
+        window.location.search.slice(1).split('&').forEach(function (pair) {
+          if (!pair) return;
+          var kv = pair.split('='); q[kv[0]] = decodeURIComponent((kv[1] || '').replace(/\+/g, ' '));
+        });
+      } catch (e) {}
+      var el = document.getElementById('scoreLine');
+      if (el && q.map) {
+        el.textContent = 'YOUR MAP: ' + q.map + ' — the Cycle holds it between re-reads.';
+        el.style.display = 'block';
+      }
+    })();
+
+    // ---- next opening: the coming Monday (4 lanes/week cadence) ----
+    (function () {
+      function fmt(d) {
+        var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        return 'Mon ' + months[d.getMonth()] + ' ' + d.getDate();
+      }
+      var now = new Date();
+      var day = now.getDay(); // 0 Sun ... 6 Sat
+      var add = (day === 1 && now.getHours() < 12) ? 0 : ((8 - day) % 7 || 7);
+      var next = new Date(now.getTime() + add * 86400000);
+      var label = fmt(next);
+      ['nextSlot', 'slotLine'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.textContent = label;
+      });
+    })();
+  </script>
+</body>
+</html>
