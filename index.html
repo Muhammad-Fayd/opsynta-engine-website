@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Opsynta Engine — Universal Operational Intelligence</title>
-  <meta name="description" content="Opsynta Engine is a universal, vertical-agnostic intelligence layer. If your process can be mapped, it will be made autonomous." />
+  <meta name="description" content="Opsynta Engine is a universal, vertical-agnostic intelligence layer with a full diagnostic line-up: the Deep Map, Pilot Autopsy, Inference Autopsy, Shadow Ledger, Agent Autopsy, and the retained Opsynta Cycle. If your process can be mapped, it will be made autonomous." />
   <meta property="og:title" content="Opsynta Engine — Universal Operational Intelligence" />
-  <meta property="og:description" content="Six capability APIs. One consumption-based economic model. Zero lock-in. If your process can be mapped, it will be made autonomous." />
+  <meta property="og:description" content="Six capability APIs. One diagnostic grid: Deep Map, Pilot Autopsy, Inference Autopsy, Shadow Ledger, Agent Autopsy, Opsynta Cycle. One economic model. If your process can be mapped, it will be made autonomous." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://muhammad-fayd.github.io/opsynta-engine-website/assets/og-site.png" />
   <meta property="og:image:width" content="1200" />
@@ -18,6 +18,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%230A0F23'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%23D4AF37'/%3E%3Cellipse cx='32' cy='32' rx='26' ry='10' fill='none' stroke='%23FAE4CF' stroke-width='2' transform='rotate(30 32 32)'/%3E%3C/svg%3E" />
+  <style>
+    /* Diagnostics grid — offer cards (scoped to this page, Dusk Atlas theme) */
+    #offers { overflow: hidden; }
+    .offer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 32px; }
+    @media (max-width: 900px) { .offer-grid { grid-template-columns: 1fr; } }
+    .offer-card { background: var(--navy2); border: 1px solid rgba(250, 228, 207, .10); border-radius: 14px; padding: 26px 28px; display: flex; flex-direction: column; }
+    .offer-card:hover { border-color: rgba(212, 175, 55, .32); }
+    .offer-state { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); margin-bottom: 8px; }
+    .offer-name { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--peach); }
+    .offer-price { font-family: var(--font-mono); color: var(--gold); font-size: 14.5px; margin: 6px 0 12px; letter-spacing: .03em; }
+    .offer-deliv { color: rgba(250, 228, 207, .62); font-size: 14.5px; flex: 1; }
+    .offer-deliv strong { color: var(--peach); }
+    .offer-land { font-family: var(--font-mono); font-size: 11.5px; color: rgba(250, 228, 207, .40); margin-top: 16px; letter-spacing: .05em; }
+    .offer-land b { color: var(--gold); font-weight: 600; }
+    .offer-cta { margin-top: 16px; }
+    .offer-cta a { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--cyan); border: 1px solid rgba(0, 194, 255, .28); background: rgba(0, 194, 255, .08); padding: 9px 16px; border-radius: 8px; display: inline-block; }
+    .offer-cta a:hover { background: rgba(0, 194, 255, .18); }
+    @media (max-width: 900px) { .offer-quote { margin-top: 26px; } }
+  </style>
 </head>
 <body>
 
@@ -49,6 +68,7 @@
         <a href="#field-notes">Field Notes</a>
         <a href="#sdk">Partner SDK</a>
         <a href="#pricing">Pricing</a>
+        <a href="#offers">The Line-Up</a>
         <a href="autopsy.html">Process Autopsy</a>
         <a class="btn btn-gold btn-sm" href="#contact">Map a Process</a>
       </nav>
@@ -68,8 +88,10 @@
         <p class="lead">Every bottleneck your operations feel — the <strong>unstructured data</strong>, the <strong>human delay</strong>, the <strong>interface friction</strong> — is the same pattern. Opsynta is a universal intelligence layer that maps that pattern once, then makes it autonomous, in any industry.</p>
         <div class="hero-cta">
           <a class="btn btn-gold" href="autopsy.html">Run the Process Autopsy</a>
+          <a class="btn btn-outline" href="#offers">The Full Line-Up</a>
           <a class="btn btn-outline" href="#architecture">See the Architecture</a>
         </div>
+        <p class="hero-pricing mono" style="font-family: var(--font-mono); font-size: 12.5px; color: var(--dust); margin-top: 18px;">Deep Map $2,500 · Pilot Autopsy $3,500 · Inference Autopsy $2,500 · Shadow Ledger $2,900 · Agent Autopsy $4,500 · Opsynta Cycle $1,500/mo</p>
         <div class="stat-grid">
           <div class="stat-card"><p class="stat-tag">Enterprise AI adoption</p><p class="stat-number">90<span>%</span></p><p class="stat-label">of enterprises adopted AI</p><p class="stat-src">Unico Connect, 2026</p></div>
           <div class="stat-card"><p class="stat-tag">Value actually captured</p><p class="stat-number gold">6<span>%</span></p><p class="stat-label">captured the value they sought</p><p class="stat-src">Unico Connect, 2026</p></div>
@@ -467,6 +489,72 @@
         </div>
         <p class="section-kicker light-kicker">Diagnostics, recovery sprints and retained ledgers are billed in the same compute units — every entry is an exit into the same model.</p>
         <p class="section-kicker light-kicker">Revenue share on resale: <strong>70/30 partner/Opsynta</strong> on the markup above CU cost. CU reviewed quarterly, adjusted only with 90 days' notice.</p>
+      </div>
+    </section>
+
+    <!-- ============ THE DIAGNOSTIC GRID ============ -->
+    <section class="dark" id="offers">
+      <div class="container">
+        <p class="eyebrow"><span class="pill pill-dark">The Diagnostic Grid</span><span class="pill-meta">The Full Line-Up · All Fixed-Fee · All Prepaid</span></p>
+        <h2 class="display-sm">A grid, not a ladder. <span class="gold">Whatever state you arrive in, an offer names it.</span></h2>
+        <p class="section-lead">A ladder assumes one buyer who climbs tiers. The grid maps products to buyer states, so a prospect who is curious buys from the same portfolio as one whose pilot just died, whose bill keeps rising, whose people run shadow AI, or whose agent is days from production. Every offer inherits the same covenant — fixed fee, fixed duration, one seam, 100% prepaid, a capacity cap, and an honest verdict rendered <em>before</em> anything is sold to you.</p>
+        <div class="offer-grid">
+          <article class="offer-card">
+            <p class="offer-state">Curious — considering deployment</p>
+            <h3 class="offer-name">The Deep Map</h3>
+            <p class="offer-price">$2,500 · 5 working days</p>
+            <p class="offer-deliv">An operational graph of one process, the seam where it bottlenecks, and the verdict on whether it should be automated at <strong>all</strong> — including an honest "don't deploy." The engine's front door, in any vertical.</p>
+            <p class="offer-land">Lands into <b>→ Growth · the build</b></p>
+            <p class="offer-cta"><a href="deepmap.html">Map the operation</a></p>
+          </article>
+          <article class="offer-card">
+            <p class="offer-state">Failed — pilot died, budget burned</p>
+            <h3 class="offer-name">The Pilot Autopsy</h3>
+            <p class="offer-price">$3,500 · 5 working days</p>
+            <p class="offer-deliv">A <strong>kill-or-fix verdict</strong> on the pilot nobody will examine, the failure mode that killed it, a salvage plan pricing what's still worth money, and a vendor accountability review. The 95% club's seat.</p>
+            <p class="offer-land">Lands into <b>→ Growth · salvage plan</b></p>
+            <p class="offer-cta"><a href="pilot_autopsy.html">Autopsy the pilot</a></p>
+          </article>
+          <article class="offer-card">
+            <p class="offer-state">Overspending — inference bill rising</p>
+            <h3 class="offer-name">The Inference Autopsy</h3>
+            <p class="offer-price">$2,500 · 5 working days · savings guarantee</p>
+            <p class="offer-deliv">One LLM bill mapped: a call-route inventory, a model-per-route audit, caching and renegotiation — an <strong>engineer-ready plan</strong> written against your bill, with the written guarantee that savings exceed the fee within 90 days.</p>
+            <p class="offer-land">Lands into <b>→ Growth · routing build</b></p>
+            <p class="offer-cta"><a href="inference_autopsy.html">Find the leak</a></p>
+          </article>
+          <article class="offer-card">
+            <p class="offer-state">Exposed — shadow AI, compliance clock</p>
+            <h3 class="offer-name">The Shadow Ledger</h3>
+            <p class="offer-price">$2,900 · 7 working days</p>
+            <p class="offer-deliv">Your <strong>unsanctioned AI mapped</strong> — every tool in use, every seam where data leaves the building, graded against EU AI Act risk classes and written onto a one-page policy plus a board-ready memo before the regulator looks.</p>
+            <p class="offer-land">Lands into <b>→ Growth · policy build</b></p>
+            <p class="offer-cta"><a href="shadow_ledger.html">Open the ledger</a></p>
+          </article>
+          <article class="offer-card">
+            <p class="offer-state">Shipping — agent about to go live</p>
+            <h3 class="offer-name">The Agent Autopsy</h3>
+            <p class="offer-price">$4,500 · 7 working days</p>
+            <p class="offer-deliv">A <strong>failure-mode battery</strong> run against your agent before production — an accuracy and drift scorecard, a severity-ranked defect register, a regression protocol, and a signed go/no-go verdict. Under 10% of the build it protects.</p>
+            <p class="offer-land">Lands into <b>→ Growth · engineering</b></p>
+            <p class="offer-cta"><a href="agent_autopsy.html">Flight-test the agent</a></p>
+          </article>
+          <article class="offer-card">
+            <p class="offer-state">Committed — wants standing measurement</p>
+            <h3 class="offer-name">The Opsynta Cycle</h3>
+            <p class="offer-price">$1,500/mo · 3-month minimum · 4 lanes at launch</p>
+            <p class="offer-deliv">The missing rung between a one-shot diagnostic and $5K+ fractional leadership: a monthly <strong>friction pulse</strong>, a one-page report, two working calls, and a <strong>$500/mo credit</strong> toward a fresh Deep Map each quarter.</p>
+            <p class="offer-land">Lands into <b>→ Deep Map · Enterprise</b></p>
+            <p class="offer-cta"><a href="opsynta_cycle.html">Reserve a lane</a></p>
+          </article>
+        </div>
+        <div class="reframe-quote offer-quote">
+          <p class="reframe-tag">The Covenant</p>
+          <p class="reframe-text">Every verdict can be <span class="gold">no</span> — and the refusal is the credential. Deliverables are written to be shown: to a board, an insurer, an acquirer's diligence team, or the engineer who owns the bill. The fee credits 100% toward Growth within 60 days.</p>
+        </div>
+        <div style="text-align:center; margin-top: 30px;">
+          <a class="btn btn-gold" href="autopsy.html">Not sure which state you're in? Run the Process Autopsy — it names it in seven questions, three minutes.</a>
+        </div>
       </div>
     </section>
 
