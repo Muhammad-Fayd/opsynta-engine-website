@@ -172,6 +172,66 @@
           </script>
           <!-- ===== /DEEP MAP CTA ===== -->
 
+          <!-- ===== DIAGNOSTIC GRID ROUTER (paste-in, self-contained) ===== -->
+          <div class="dg-router" id="dgRouter" hidden>
+            <style>
+              .dg-router{margin:22px 0 4px;padding:24px 26px;border:1px solid rgba(0,194,255,.22);border-radius:14px;background:linear-gradient(165deg,rgba(0,194,255,.06),rgba(16,25,56,.55));}
+              .dg-router .dg-tag{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#00C2FF;margin:0 0 10px;}
+              .dg-router h4{font-family:"Playfair Display",Georgia,serif;font-size:22px;line-height:1.2;color:#FAE4CF;margin:0 0 8px;}
+              .dg-router p{color:rgba(250,228,207,.66);font-size:14px;line-height:1.6;margin:0 0 14px;}
+              .dg-router .dg-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+              .dg-router a.dg-link{display:block;font-family:Inter,sans-serif;font-weight:600;font-size:13.5px;color:#FAE4CF;text-decoration:none;padding:11px 14px;border-radius:9px;border:1px solid rgba(250,228,207,.16);background:rgba(250,228,207,.04);}
+              .dg-router a.dg-link:hover{border-color:#D4AF37;color:#E8C558;}
+              .dg-router a.dg-link span{display:block;font-weight:400;font-size:11px;color:rgba(250,228,207,.45);margin-top:3px;}
+              .dg-router .dg-sub{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:rgba(250,228,207,.42);margin:12px 0 0 !important;}
+              @media (max-width:640px){.dg-router .dg-row{grid-template-columns:1fr;}}
+            </style>
+            <p class="dg-tag">Opsynta · The Diagnostic Grid</p>
+            <h4>Or start from where you actually are.</h4>
+            <p>The Deep Map is the door for "exploring." One of these four is usually closer to the truth:</p>
+            <div class="dg-row">
+              <a class="dg-link" id="dgFailed" href="pilot_autopsy.html">Our AI pilot died.<span>Pilot Autopsy · $3,500 · 5 days</span></a>
+              <a class="dg-link" id="dgSpend" href="inference_autopsy.html">The AI bill keeps rising.<span>Inference Autopsy · $2,500 · 5 days</span></a>
+              <a class="dg-link" id="dgExposed" href="shadow_ledger.html">Nobody knows what our people use.<span>Shadow Ledger · $2,900 · 7 days</span></a>
+              <a class="dg-link" id="dgShipping" href="agent_autopsy.html">We're about to launch an agent.<span>Agent Autopsy · $4,500 · 7 days</span></a>
+            </div>
+            <p class="dg-sub">Already mapped? <b style="color:#D4AF37;">THE OPSYNTA CYCLE</b> keeps your seam measured monthly · $1,500/mo</p>
+          </div>
+          <script>
+          (function(){
+            var router = document.getElementById('dgRouter');
+            if(!router) return;
+            function build(){
+              var camp='organic';
+              try{
+                var attr=JSON.parse(localStorage.getItem('opsynta_attr')||'null');
+                var t=attr&&(attr.last||attr.first);
+                if(t&&t.utm_campaign&&t.utm_campaign!=='direct') camp=t.utm_campaign;
+              }catch(e){}
+              var map={dgFailed:['pilot_autopsy.html','pa_cta'],
+                        dgSpend:['inference_autopsy.html','ia_cta'],
+                        dgExposed:['shadow_ledger.html','sh_cta'],
+                        dgShipping:['agent_autopsy.html','aa_cta']};
+              Object.keys(map).forEach(function(id){
+                var el=document.getElementById(id);
+                if(!el) return;
+                var page=map[id][0], content=map[id][1];
+                var scoreEl=document.getElementById('resultScore');
+                var href=page+'?utm_source=site&utm_medium=page&utm_campaign='+encodeURIComponent(camp)+'&utm_content='+content;
+                if(scoreEl) href+='&score='+encodeURIComponent(scoreEl.textContent.trim());
+                el.setAttribute('href',href);
+              });
+              router.hidden=false;
+            }
+            var res=document.getElementById('quizResult');
+            if(res && !res.hidden){ build(); return; }
+            new MutationObserver(function(){
+              if(!res.hidden){ build(); }
+            }).observe(res,{attributes:true,attributeFilter:['hidden']});
+          })();
+          </script>
+          <!-- ===== /DIAGNOSTIC GRID ROUTER ===== -->
+
           <div class="result-contact">
             <p class="result-contact-line">Email this map to Muhammad — the founder reads every autopsy directly. It arrives pre-tagged with the post you came from.</p>
             <div class="contact-actions">

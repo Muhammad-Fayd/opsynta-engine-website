@@ -1,23 +1,13 @@
 /* ============================================================
-   Opsynta Engine — UTM Attribution Patch (Option B)
+   Opsynta Engine — UTM Attribution Patch v2 (Diagnostic Grid)
    ============================================================
-   What it does:
-   1. Captures utm_* params from the landing URL (first-touch
-      AND last-touch) into localStorage, plus referrer, landing
-      path and timestamp.
-   2. Self-attributes every contact action on the page:
-      - mailto: links get a campaign-tagged subject + body line
-      - wa.me links get a pre-filled message with the tag
-      Every email/WhatsApp you receive tells you exactly which
-      LinkedIn post drove the lead.
-   3. Idempotent and safe: no external dependencies, no network
-      calls, works on GitHub Pages, survives anchor navigation
-      (#pricing) and repeat visits.
-
-   Drop-in file: /js/utm.js   (loaded by index.html)
-   Verify after deploy: open the site with
-   ?utm_source=linkedin&utm_medium=social&utm_campaign=88percent&utm_content=post1
-   then check DevTools console + localStorage key "opsynta_attr".
+   v2 changes (additive only — no behavior change for existing
+   85+ links, which never carry utm_term):
+   1. touch() now extracts utm_term.
+   2. attributionLine() appends ' · term=<value>' to the
+      [Attribution] line when a term is present — so per-company
+      DM links (utm_term=tdbank, term=citi, …) are searchable in
+      Gmail exactly like campaigns.
    ============================================================ */
 (function () {
   'use strict';
@@ -95,6 +85,7 @@
     return {
       camp: camp,
       content: content,
+      term: t.utm_term || '',
       src: t.utm_source || 'direct',
       compact: camp + (content ? '/' + content : ''),
       srcLabel: labels[srcKey] || (t.utm_source ? t.utm_source.charAt(0).toUpperCase() + t.utm_source.slice(1) : 'Direct')
@@ -112,6 +103,7 @@
     var parts = ['[Attribution] source=' + t.src];
     if (t.camp) parts.push('campaign=' + t.camp);
     if (t.content) parts.push('content=' + t.content);
+    if (t.term) parts.push('term=' + t.term);
     return parts.join(' \u00b7 ');
   }
 

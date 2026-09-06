@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Shadow Ledger — Opsynta Engine</title>
-  <meta name="description" content="Shadow AI is already in your company. See it, grade it, and put it on a one-page policy before a regulator does it for you. The Shadow Ledger: seven days, $2,900 fixed." />
+  <meta name="description" content="55–78% of employees use AI tools their company never approved. The EU AI Act's obligations carry fines up to €15M or 3% of turnover. The Shadow Ledger is the SMB exposure audit the $30K–$120K consultancies won't run: seven working days, $2,900 fixed — the inventory, the exposure grades, and the board-ready memo." />
   <meta property="og:title" content="The Shadow Ledger — Opsynta Engine" />
-  <meta property="og:description" content="Seven days. $2,900 fixed. Your unsanctioned-AI exposure inventoried, graded against EU AI Act risk classes, and written onto a one-page policy your board can sign this quarter." />
+  <meta property="og:description" content="Your people are feeding company data into AI tools you never approved. Seven days, $2,900 fixed: the shadow-AI inventory, exposure grades against the EU AI Act risk classes, and a board-ready memo written to be shown." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%230A0F23'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%23D4AF37'/%3E%3Cellipse cx='32' cy='32' rx='26' ry='10' fill='none' stroke='%23FAE4CF' stroke-width='2' transform='rotate(30 32 32)'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%230A0F23'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%23D4AF37'/%3E%3Cpath d='M18 40 L32 16 L46 40' fill='none' stroke='%23FAE4CF' stroke-width='2.5'/%3E%3C/svg%3E" />
   <style>
     /* ============ DUSK ATLAS — self-contained (no stylesheet dependency) ============ */
     :root {
@@ -108,7 +108,7 @@
     .price-anchor .mono { color: var(--cyan); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; display: block; margin-bottom: 8px; }
     .price-anchor strong { color: var(--peach); }
 
-    /* ---------- listing rows ---------- */
+    /* ---------- routes ---------- */
     .vert-row { display: grid; grid-template-columns: 190px 1fr; gap: 20px; padding: 17px 0; border-bottom: 1px solid var(--line-soft); align-items: baseline; }
     .vert-row:last-child { border-bottom: none; }
     .vert-name { font-family: var(--mono); font-size: 13px; color: var(--gold); letter-spacing: .1em; text-transform: uppercase; }
@@ -157,13 +157,13 @@
       <a class="logo-chip" href="index.html" aria-label="Opsynta Engine home">
         <svg class="logo-mark" viewBox="0 0 40 40" role="img" aria-hidden="true">
           <defs>
-            <radialGradient id="sphereGradSL" cx="35%" cy="30%" r="75%">
+            <radialGradient id="sphereGradSH" cx="35%" cy="30%" r="75%">
               <stop offset="0%" stop-color="#F5E6C8"/>
               <stop offset="45%" stop-color="#D4AF37"/>
               <stop offset="100%" stop-color="#8C6D1F"/>
             </radialGradient>
           </defs>
-          <circle cx="20" cy="20" r="17" fill="url(#sphereGradSL)"/>
+          <circle cx="20" cy="20" r="17" fill="url(#sphereGradSH)"/>
           <ellipse cx="20" cy="20" rx="15" ry="6" fill="none" stroke="#0A0F23" stroke-width="1.4" transform="rotate(28 20 20)" opacity="0.55"/>
           <ellipse cx="20" cy="20" rx="15" ry="6" fill="none" stroke="#0A0F23" stroke-width="1.4" transform="rotate(-52 20 20)" opacity="0.35"/>
           <circle cx="13" cy="12" r="3.2" fill="#FAE4CF" opacity="0.9"/>
@@ -173,8 +173,8 @@
       <nav class="dm-nav" aria-label="Shadow Ledger">
         <a href="autopsy.html">The Process Autopsy</a>
         <a href="deepmap.html">The Deep Map</a>
-        <a href="pilot_autopsy.html">The Pilot Autopsy</a>
         <a href="shadow_ledger.html" class="active">The Shadow Ledger</a>
+        <a href="shadow_ledger.html#grid">The Grid</a>
         <a href="index.html#pricing">Pricing</a>
       </nav>
     </div>
@@ -187,44 +187,43 @@
       <div class="container">
         <p class="eyebrow">
           <span class="pill">Opsynta · The Shadow Ledger</span>
-          <span class="pill pill-meta">7 working days · up to 150 people</span>
+          <span class="pill pill-meta">7 working days · one organization</span>
           <span class="pill pill-meta">$2,900 fixed</span>
         </p>
-        <h1 class="hero-title">Shadow AI is already in your company.<br /><em>See it before a regulator does.</em></h1>
-        <p class="lead">By now the question isn't whether your people are feeding company data to unsanctioned tools — the studies say <strong>more than half of your workforce already is</strong>. The question is which risk class that exposure falls in, and whether you can prove on a governance sheet that you know. The Shadow Ledger answers it in seven days: your unsanctioned AI inventoried, <strong>graded against EU AI Act risk classes</strong>, and written onto a <strong>one-page policy your board can sign this quarter</strong> — timed for the high-risk obligations taking effect after August 2026.</p>
+        <h1 class="hero-title">Your people use AI tools<br />you never approved. <em>Since August 2, that's a fine risk.</em></h1>
+        <p class="lead">The research consensus is 55–78%: more than half of employees feed company data into unsanctioned AI tools — chatbots, browser extensions, "free" SaaS features, personal accounts. Most of it is harmless productivity. Some of it is <strong>company data leaving the building</strong>, unlogged, uninsured, and — since the EU AI Act's obligations went live on 2 August 2026 — carrying fines up to <strong>€15M or 3% of global turnover</strong>. The compliance consultancies will investigate this for $30,000–$120,000. The Shadow Ledger is the mid-market version: seven days, one organization, the inventory, the exposure grades, and the memo your board — or your acquirer's diligence team — can actually read.</p>
         <p class="score-line mono" id="scoreLine"></p>
         <div class="hero-cta">
-          <a class="btn btn-gold" href="mailto:mohamed.fayd5589@gmail.com?subject=Shadow%20Ledger%20%E2%80%94%20our%20exposure&body=Hi%20Muhammad%2C%0A%0AWe%20want%20to%20see%20our%20shadow%20AI%20exposure%20before%20a%20regulator%20does.%0A%0ACompany%20size%3A%0AWhere%20AI%20is%20known%20to%20be%20used%3A%0AWho%20would%20own%20the%20policy%3A%0A%0A%E2%80%94%20%5Bname%5D">Open the ledger</a>
+          <a class="btn btn-gold" href="mailto:mohamed.fayd5589@gmail.com?subject=Shadow%20Ledger%20%E2%80%94%20the%20scan&body=Hi%20Muhammad%2C%0A%0AWe%20want%20the%20scan%3A%0A%0ACompany%3A%0AHeadcount%20and%20locations%3A%0AWhat%20we%20already%20know%20or%20suspect%20about%20AI%20usage%3A%0A%0A%E2%80%94%20%5Bname%5D">Request the scan</a>
           <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp · 01152701025</a>
         </div>
-        <p class="hero-capacity">One ledger per week. Next table opens <b id="nextSlot">Monday</b>. You keep the ledger; the exposure map is updated quarterly as an option.</p>
+        <p class="hero-capacity">One ledger per week. Next window opens <b id="nextSlot">Monday</b>. The full fee credits toward a Growth start within 60 days.</p>
       </div>
     </section>
 
     <!-- ============ THE QUESTION ============ -->
     <section class="section" id="question">
       <div class="container">
-        <p class="section-tag">The gap between the story and the tool</p>
-        <h2 class="display">The policy conversation is coming. The exposure won't wait for it.</h2>
-        <p class="lead body-copy" style="margin-bottom: 8px;">Most companies have a governance story and no instrument: an AI policy nobody enforces, or no policy at all. Meanwhile the teams are building prompts on the same credit card that pays the core infrastructure. The audit firms who could map this won't touch an account under seven figures; the policy consultants quote $30,000 to $120,000 and hand you a template. Neither answers the question that matters here: <strong>which of our systems is actually exposed, and to what risk class?</strong></p>
+        <p class="section-tag">The question boards started asking after August 2</p>
+        <h2 class="display">"Do we actually know what our people are using?"</h2>
+        <p class="lead body-copy" style="margin-bottom: 8px;">Nobody wanted this question. AI enthusiasm arrived at your company years before AI governance — tools were adopted by individuals, paid for on personal cards or expensed as "software," and never inventoried. The question is no longer cultural ("should we allow it?") but factual: <strong>which tools, which data, which exposure</strong>. The Shadow Ledger answers it with evidence in seven days, at a price the $30K–$120K tier never offered you.</p>
         <div class="stats-band">
           <div class="stat-card">
             <p class="stat-number">55–78%</p>
-            <p class="stat-label">of employees already use unsanctioned AI for work tasks — adoption that happens below HR, off procurement, on personal accounts</p>
-            <p class="stat-src">2025–26 enterprise shadow-AI surveys (Microsoft, Intel, Nitro)</p>
+            <p class="stat-label">of employees use unsanctioned AI tools at work — the research consensus across multiple 2024–26 studies; your number is knowable, not guessable</p>
+            <p class="stat-src">shadow-AI research consensus, 2024–26</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-number">€15M / 3%</p>
+            <p class="stat-label">the EU AI Act penalty ceiling — whichever is higher — with high-risk obligations live since 2 August 2026 and extraterritorial reach you shouldn't assume you escape</p>
+            <p class="stat-src">EU AI Act, in force 2026</p>
           </div>
           <div class="stat-card">
             <p class="stat-number">$4.63M</p>
-            <p class="stat-label">is the average cost when an unsanctioned AI exposure becomes a breach — data, notice, and reparation, before remediation</p>
-            <p class="stat-src">IBM Cost of a Data Breach, 2024</p>
-          </div>
-          <div class="stat-card">
-            <p class="stat-number">$30–120K</p>
-            <p class="stat-label">is what policy consultancies charge to map and rewrite AI governance at the scale of a 150-person company</p>
-            <p class="stat-src">2025–26 published policy engagements</p>
+            <p class="stat-label">the average cost of a data breach in 2025 — shadow AI is a named contributor: data that left through a tool nobody logged, nobody approved, nobody can recall</p>
+            <p class="stat-src">IBM Cost of a Data Breach, 2025</p>
           </div>
         </div>
-        <p class="lead body-copy" style="margin-top: 26px;">One line on the timeline matters more than the rest: the EU AI Act's obligations for high-risk AI systems take effect <strong>from August 2, 2026</strong>. The compliance conversation at the board level was always coming; it now has a date.</p>
       </div>
     </section>
 
@@ -232,28 +231,58 @@
     <section class="section" id="deliverables">
       <div class="container">
         <p class="section-tag">What comes back on Day 7</p>
-        <h2 class="display">A ledger, a map, and a policy nobody will file away.</h2>
-        <p class="lead body-copy" style="margin-bottom: 30px;">Five artifacts. Written to survive an audit, an executive read, and a board meeting in the same week.</p>
+        <h2 class="display">An inventory, a grade, and a memo.</h2>
+        <p class="lead body-copy" style="margin-bottom: 30px;">Four artifacts. One organization. Written to be shown — to a board, an insurer, or an acquirer's diligence team — because that is who asks.</p>
         <div class="grid-2">
           <div class="deliv-card">
-            <p class="deliv-num">01 · THE SHADOW INVENTORY</p>
-            <h3>Unsanctioned AI, found</h3>
-            <p>The tools, the teams, the accounts, and the volumes actually in use — triangulated from browser-behavior evidence, access logs, API traffic, and interviews. <strong>Not a survey of intentions: a map of behavior.</strong></p>
+            <p class="deliv-num">01 · THE SHADOW-AI INVENTORY</p>
+            <h3>What is actually running</h3>
+            <p>Every AI tool in actual use, discovered three ways — <strong>structured anonymous survey, expense and SaaS-wallet scan, IT-assisted extension and app audit</strong> — cross-checked against each other, because each method alone undercounts. The deliverable is the list nobody has: what your organization runs, not what it approves.</p>
           </div>
           <div class="deliv-card">
-            <p class="deliv-num">02 · THE DUAL-RISK GREADING</p>
-            <h3>Every use, graded</h3>
-            <p>Every inventory line graded twice: its <strong>data-handling risk</strong> (what's being pasted in) and its <strong>EU AI Act risk class</strong> (what class of system it feeds), so the worst conversations surface first.</p>
+            <p class="deliv-num">02 · THE EXPOSURE GRADES</p>
+            <h3>Each usage path, rated</h3>
+            <p>Every discovered tool graded for data exposure — what it ingests, what it retains, what it trains on — and <strong>mapped to the four risk classes of the EU AI Act</strong> (regional variant: applicable GCC frameworks). Not a scare document: a severity-ranked ledger, path by path, so remediation has an order.</p>
           </div>
           <div class="deliv-card">
-            <p class="deliv-num">03 · THE LEAK SEAM MAP</p>
+            <p class="deliv-num">03 · THE SEAM MAP</p>
             <h3>Where data actually leaves</h3>
-            <p>The concrete seams where company data moves to unsanctioned systems — pasted client records, exported datasets, document batches — with the highest-risk seams named and ranked.</p>
+            <p>The five routes — chat paste, file upload, extensions, SaaS AI features, personal accounts — instrumented against your real usage: <strong>which seams carry company data out, how often, with what severity</strong>. This is the Opsynta friction-ledger method applied to your boundary instead of your workflow.</p>
           </div>
           <div class="deliv-card">
-            <p class="deliv-num">04 · POLICY + BOARD MEMO</p>
-            <h3>One page your board signs</h3>
-            <p>A <strong>one-page AI policy draft</strong> built from your inventory, not a template, plus a board-ready memo that turns this map into a governance decision — and a defensible record of the moment you knew.</p>
+            <p class="deliv-num">04 · THE POLICY + MEMO</p>
+            <h3>One page each, written to be shown</h3>
+            <p>A <strong>one-page enforceable AI usage policy</strong> (bilingual variant available) — not a 40-page document nobody reads — and a board-ready exposure memo: the exposure, the remediation ladder, the residual risk. The two documents a diligence team, insurer, or regulator gets handed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FIVE ROUTES ============ -->
+    <section class="section" id="routes">
+      <div class="container">
+        <p class="section-tag">The five ways company data leaves</p>
+        <h2 class="display">The ledger checks all five.</h2>
+        <div style="margin-top: 22px;">
+          <div class="vert-row">
+            <p class="vert-name">Chat paste</p>
+            <p class="vert-seam"><strong>The fastest route out.</strong> Contract text, customer data, code, strategy docs pasted into consumer chatbots — free tier, personal account, no retention agreement. Untraceable from inside your network.</p>
+          </div>
+          <div class="vert-row">
+            <p class="vert-name">File upload</p>
+            <p class="vert-seam"><strong>Whole documents, not snippets.</strong> Spreadsheets, PDFs, transcripts uploaded for summarization or analysis — with enterprise data leaving under terms nobody at your company ever read.</p>
+          </div>
+          <div class="vert-row">
+            <p class="vert-name">Extensions</p>
+            <p class="vert-seam"><strong>Browser extensions with page access.</strong> AI assistants that read every tab: your CRM, your inbox, your internal tools. The IT-assisted audit finds them; the usage survey never does.</p>
+          </div>
+          <div class="vert-row">
+            <p class="vert-name">SaaS features</p>
+            <p class="vert-seam"><strong>The AI button your vendor switched on.</strong> Note-takers, draft generators, "smart" summaries inside tools you legitimately pay for — processing your data under the vendor's AI terms, not your security review.</p>
+          </div>
+          <div class="vert-row">
+            <p class="vert-name">Personal accounts</p>
+            <p class="vert-seam"><strong>Work on the free plan.</strong> Employees doing real tasks in personal AI accounts — the data leaves, the retention is consumer-grade, and if the employee leaves, so does the record of what was shared.</p>
           </div>
         </div>
       </div>
@@ -263,41 +292,48 @@
     <section class="section" id="process">
       <div class="container">
         <p class="section-tag">The seven working days</p>
-        <h2 class="display">Seven days. Six hours of your team's time.</h2>
+        <h2 class="display">Seven days. About five hours of your team's time.</h2>
         <div style="margin-top: 26px;">
           <div class="day-row">
             <p class="day-tag">DAY 01</p>
             <div class="day-body">
-              <h4>Perimeter intake</h4>
-              <p>One call with the person who actually enforces (or doesn't enforce) access today, plus the artifact list: access logs, purchase data, device forwarders, security tickets.</p>
+              <h4>Scoping — the boundaries</h4>
+              <p>Executive interview, employee-roster sampling frame, and access: expense and procurement records, the SaaS wallet, IT's extension and app telemetry. We define what "the organization" means before counting what runs inside it.</p>
             </div>
           </div>
           <div class="day-row">
             <p class="day-tag">DAYS 02–03</p>
             <div class="day-body">
-              <h4>The evidence pass</h4>
-              <p>The instrumented sweep: sanctioned-inventory comparison, log triangulation, and usage interviews across the functions where shadow tools concentrate.</p>
+              <h4>Discovery — the three-way census</h4>
+              <p>The structured anonymous usage survey (anonymous because honesty is the data), the expense and SaaS-wallet scan (the paid shadow), and the IT-assisted extension and app inventory (the technical shadow). Three methods, one cross-checked list — each alone undercounts.</p>
             </div>
           </div>
           <div class="day-row">
-            <p class="day-tag">DAYS 04–05</p>
+            <p class="day-tag">DAY 04</p>
             <div class="day-body">
-              <h4>Grading the ledger</h4>
-              <p>Every inventory line scored for data-handling risk and EU AI Act risk class, with the leak seams mapped and ranked. The board meeting starts to write itself here.</p>
+              <h4>Grading — severity, not panic</h4>
+              <p>Every discovered tool classified by data sensitivity and mapped to the EU AI Act's four risk classes — regional variant maps to applicable GCC frameworks. Each usage path gets a grade and a one-line reason, so the ledger can be challenged line by line instead of feared wholesale.</p>
+            </div>
+          </div>
+          <div class="day-row">
+            <p class="day-tag">DAY 05</p>
+            <div class="day-body">
+              <h4>Seam mapping — where data leaves</h4>
+              <p>The five routes instrumented against your actual usage patterns: which seams carry company data out, at what volume, with what exposure severity. The same ledger format Opsynta uses for every diagnosis — this time pointed at your boundary.</p>
             </div>
           </div>
           <div class="day-row">
             <p class="day-tag">DAY 06</p>
             <div class="day-body">
-              <h4>The policy draft</h4>
-              <p>The one-page policy built from your inventory — sanction, exception, and monitoring language that names this company's actual tools, not generic categories.</p>
+              <h4>Policy drafting — one page</h4>
+              <p>The enforceable AI usage policy: what's approved, what's banned, what needs review — one page, bilingual variant available, written to be enforced rather than filed. A 40-page policy nobody reads is a liability with a cover page.</p>
             </div>
           </div>
           <div class="day-row">
             <p class="day-tag">DAY 07</p>
             <div class="day-body">
-              <h4>Readout and handoff</h4>
-              <p>A 60-minute readout with the inventory, the grades, the seams, and the memo — plus the optional quarterly re-map so the ledger stays current after we leave.</p>
+              <h4>Readout — the memo briefing</h4>
+              <p>A 60-minute recorded briefing on the exposure memo: the inventory, the grades, the remediation ladder in severity order, the residual risk — and, only if you want it, the Growth bridge where policy tooling, training, or enforcement seams are the follow-on.</p>
             </div>
           </div>
         </div>
@@ -307,21 +343,21 @@
     <!-- ============ PRICING ============ -->
     <section class="section" id="price">
       <div class="container">
-        <p class="section-tag">One price · one page · one approver</p>
-        <h2 class="display">$2,900. Fixed. Before the obligation date.</h2>
+        <p class="section-tag">One price · one organization · one week</p>
+        <h2 class="display">$2,900. Fixed. Board-readable.</h2>
         <div class="price-panel">
           <p class="price-figure">$2,900 <span>fixed · 7 working days</span></p>
           <div class="price-cols">
             <ul class="price-notes">
-              <li><strong>One ledger per week, maximum.</strong> The founder performs every sweep personally. Capacity is capped because a shadow map is only worth as much as the hands that built it.</li>
-              <li><strong>If you start Growth within 60 days, the full $2,900 is credited to it.</strong> The policy becomes the first artifact of the governed platform replacing the shadow.</li>
-              <li><strong>The ledger stays yours.</strong> Inventory, grades, seams, policy, memo — all delivered as your documents, with the quarterly re-map offered as the standing option.</li>
-              <li><strong>It's priced to be the compliant alternative to ignoring it:</strong> a fraction of the $30K–$120K policy consultancies, and a rounding error next to a $4.63M average breach.</li>
-              <li>100% prepaid. Your table is reserved the moment the invoice is paid.</li>
+              <li><strong>One organization up to 150 people</strong> — the interview-heavy method caps the unit; larger organizations split by entity or business unit, priced at the same per-unit rate.</li>
+              <li><strong>The full $2,900 credits toward a Growth engagement ($4,000) started within 60 days</strong> — if the remediation needs tooling or training, the ledger becomes the first payment on the repair.</li>
+              <li><strong>Anonymous by design: the survey is aggregated, no individual is named in any deliverable.</strong> The product is exposure mapping, not surveillance — employees answer honestly precisely because it can't be used against them.</li>
+              <li><strong>One ledger per week, maximum.</strong> The founder runs every interview personally. Capacity is capped so the memo stays worth handing to a board.</li>
+              <li>100% prepaid. Your window is reserved the moment the invoice is paid.</li>
             </ul>
             <aside class="price-anchor">
               <span class="mono">The alternative</span>
-              A policy consultancy runs <strong>$30,000–$120,000</strong> and returns a template. The audit firms skip sub-seven-figure accounts entirely. Or the alternative nobody prices: the <strong>August 2026 high-risk obligation date arrives</strong>, and the board is asked, in writing, whether the company knows where its data is being fed. This is the artifact that answers yes.
+              The compliance consultancies price this problem at <strong>$30,000–$120,000</strong> — enterprise governance programs sized for enterprise budgets. The private-equity version exists at <strong>$9,500</strong> per portfolio company. Below those tiers, the market's answer has been a shrug. The breach number underneath it all is <strong>$4.63M</strong> — this ledger costs a rounding error of that, before the regulator ever asks.
             </aside>
           </div>
         </div>
@@ -332,8 +368,8 @@
     <section class="section" id="founder">
       <div class="container">
         <div class="founder-note">
-          <p>I've sat in the rooms where "we don't use AI yet" gets said loudly, over the sound of twenty personal accounts feeding client data into unsanctioned tools. The gap isn't bad faith — it's absence of instrumentation. Nobody had ever shown them the map.</p>
-          <p>So this is the map. Fixed week, fixed price, fixed artifact list — and a policy that names the actual tools your people use, because a template that names none is worse than no policy at all. The option to re-map quarterly exists so the ledger ages honestly, not conveniently.</p>
+          <p>Every company I map has the same invisible asset: an AI stack that grew person by person, tool by tool, none of it approved, most of it harmless, some of it quietly carrying company data out the door. Nobody inventoried it because nobody was asked to — until the calendar made it a compliance question instead of a culture question.</p>
+          <p>So this is the inventory, priced for the organizations the governance tier won't take. I run the interviews personally, the survey is anonymous by design — because honest data is the only data worth having — and the memo that comes back names the exposure in severity order with a remediation ladder your team can actually climb. If your usage turns out to be clean, the memo says so, and that document is worth more than the fee the next time anyone audits you. The refusal is the credential.</p>
           <p class="founder-sig">MUHAMMAD FAYD · FOUNDER, OPSYNTA ENGINE</p>
         </div>
       </div>
@@ -342,29 +378,75 @@
     <!-- ============ FAQ ============ -->
     <section class="section" id="faq">
       <div class="container">
-        <p class="section-tag">Before you open the ledger</p>
-        <h2 class="display">Asked on every call.</h2>
+        <p class="section-tag">Questions you should ask</p>
+        <h2 class="display">Straight answers.</h2>
+        <div style="margin-top: 24px;">
+          <div class="faq-item">
+            <summary>We're not in the EU. Does the AI Act even apply to us?</summary>
+            <p class="faq-a">Maybe — the Act reaches providers and deployers whose output is used in the EU, and your clients, acquirers, or insurers may apply its standard contractually long before a regulator does. But the honest framing is broader: <strong>the ledger is an exposure map, not just a regulation map</strong>. The $4.63M breach number doesn't check your jurisdiction before it lands. If your exposure is genuinely zero, the memo is a clean bill of health — and you'll want that in writing eventually anyway.</p>
+          </div>
+          <div class="faq-item">
+            <summary>Will employees get in trouble?</summary>
+            <p class="faq-a">No — and structurally so. The survey is <strong>anonymous and aggregated</strong>; no deliverable names an individual. The product is exposure mapping, not surveillance: the whole method depends on honest answers, and honest answers depend on consequences being impossible. What the board receives is "the finance team routes contracts through tool X," never "Sarah does." Culture questions stay cultural; the ledger handles the factual ones.</p>
+          </div>
+          <div class="faq-item">
+            <summary>What if we find nothing?</summary>
+            <p class="faq-a">Then you've bought the cheapest clean bill of health on the market — a documented, evidence-backed memo that your AI surface is inventoried and controlled, dated and signed. That document has a way of becoming valuable the week an acquirer, insurer, or enterprise client sends a diligence questionnaire. And in the research's 55–78% range, "nothing" is the rare outcome; <strong>finding something is the base case, and finding it before an incident is the entire point</strong>.</p>
+          </div>
+          <div class="faq-item">
+            <summary>What access do you need from IT?</summary>
+            <p class="faq-a">Read-level cooperation, about three hours of IT time across the week: the extension and app telemetry your MDM or browser management already collects, the SaaS-wallet export from finance, and expense records. <strong>No endpoint agents, no deployment, no credentials stored.</strong> If IT can't assist some days, the survey and expense scans still run — the ledger just flags which routes carry wider confidence intervals.</p>
+          </div>
+          <div class="faq-item">
+            <summary>How is this different from our security team's tooling?</summary>
+            <p class="faq-a">Security tooling watches the network and the endpoints — it sees traffic, not <strong>intent, retention terms, or process</strong>. The ledger grades what the tools can't: that the "free transcription app" processes meetings under consumer terms, that the AI feature your CRM vendor enabled shares data per its updated policy, that the extension reads every page your team opens. Instrumentation tells you something is running; the ledger tells you <strong>what it means</strong>, in risk classes, with a remediation order.</p>
+          </div>
+          <div class="faq-item">
+            <summary>Why 7 days — and why only one organization at a time?</summary>
+            <p class="faq-a">Because the method is interview-heavy: the anonymous survey needs a real response window, the discovery cross-check needs finance and IT in the loop, and the grading needs the founder reading every usage path personally. Capping at <strong>one ledger per week</strong> is what keeps the memo board-grade instead of template-grade. Larger organizations split into entities or business units — same per-unit price, sequenced windows.</p>
+          </div>
+          <div class="faq-item">
+            <summary>Can the policy be bilingual — and does the GCC variant exist?</summary>
+            <p class="faq-a">Yes. The one-page policy ships in an English/Arabic variant at no extra cost, and the grading framework has a <strong>GCC regional variant</strong> that maps exposure against the applicable regional frameworks (Saudi PDPL-adjacent data rules, UAE data protection law) alongside the EU classes where relevant. The bilingual deliverable is often the one that actually changes behavior — a policy your whole workforce can read is a policy your whole workforce can follow.</p>
+          </div>
+          <div class="faq-item">
+            <summary>Who delivers it, and when can you start?</summary>
+            <p class="faq-a">The founder — personally, which is why capacity is capped at <strong>one ledger per week</strong>. The next window opens <strong id="faqSlot">Monday</strong>; after that, the following week or the waitlist. Payment is 100% on booking, so your window is reserved the moment the invoice is paid.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DIAGNOSTIC GRID ============ -->
+    <section class="section" id="grid">
+      <div class="container">
+        <p class="section-tag">The Opsynta diagnostic grid</p>
+        <h2 class="display">Whatever condition you arrive in, there is a door.</h2>
         <div style="margin-top: 22px;">
-          <details class="faq-item">
-            <summary>We don't have "AI governance" — is this for us?</summary>
-            <p class="faq-a">Especially for you. The ledger assumes no governance exists; it starts from the evidence that people are using tools anyway. The policy draft is built from what the sweep actually finds.</p>
-          </details>
-          <details class="faq-item">
-            <summary>How do you find shadow AI without invasive monitoring?</summary>
-            <p class="faq-a">We hold the line on that: no new monitoring software, no continuous surveillance, no agent on endpoints. Inventory is built from artifacts that already exist — access logs, purchase data, API traffic, interviews — then triangulated. The result tells you what's in use and where the seams are; it doesn't install a camera.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Are we too big or too small for this?</summary>
-            <p class="faq-a">The ledger is scoped for teams up to about 150 people — big enough that shadow tooling is real, small enough that one instrumented sweep can actually see it. Above that size the volume stops being a week of work and we'll tell you so on the intake call.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Does the EU AI Act date apply to us even if we're not in the EU?</summary>
-            <p class="faq-a">The risk-class grading uses the EU framework because it is the most complete published rubric. Where you operate sets which obligations bind you; the ledger grades against the framework and flags which classes are enforceable in your market. The map is useful either way — the risk classes name the physics of the exposure, not just the law.</p>
-          </details>
-          <details class="faq-item">
-            <summary>What if the sweep finds nothing?</summary>
-            <p class="faq-a">Then the verdict is "your perimeter held better than the average" — in writing. We don't manufacture inventory to justify the fee; the guarantee of the ledger is that it's honest about this company, not flattering to us.</p>
-          </details>
+          <div class="vert-row">
+            <p class="vert-name">Exploring</p>
+            <p class="vert-seam"><strong>The Deep Map</strong> — one seam, five days, $2,500, board-ready business case · <a href="deepmap.html">open this door</a></p>
+          </div>
+          <div class="vert-row">
+            <p class="vert-name">Failed</p>
+            <p class="vert-seam"><strong>The Pilot Autopsy</strong> — kill-or-fix verdict on a dead AI pilot, five days, $3,500 · <a href="pilot_autopsy.html">open this door</a></p>
+          </div>
+          <div class="vert-row">
+            <p class="vert-name">Overspending</p>
+            <p class="vert-seam"><strong>The Inference Autopsy</strong> — one AI bill, five days, $2,500, savings guaranteed · <a href="inference_autopsy.html">open this door</a></p>
+          </div>
+          <div class="vert-row">
+            <p class="vert-name">Exposed</p>
+            <p class="vert-seam"><strong>The Shadow Ledger</strong> — shadow-AI and EU AI Act exposure, seven days, $2,900 · you are here</p>
+          </div>
+          <div class="vert-row">
+            <p class="vert-name">Shipping</p>
+            <p class="vert-seam"><strong>The Agent Autopsy</strong> — pre-launch verification of one AI agent, seven days, $4,500 · <a href="agent_autopsy.html">open this door</a></p>
+          </div>
+          <div class="vert-row">
+            <p class="vert-name">Committed</p>
+            <p class="vert-seam"><strong>The Opsynta Cycle</strong> — standing monthly measurement of your seam, $1,500/mo · <a href="opsynta_cycle.html">open this door</a></p>
+          </div>
         </div>
       </div>
     </section>
@@ -373,12 +455,12 @@
     <section class="final-cta" id="book">
       <div class="container">
         <h2>Open the ledger.</h2>
-        <p>An email is enough to start — company size, what you already know is in use, and who would own the policy. The founder reads every submission, replies within a day, and will tell you honestly if the sweep wouldn't be worth its week.</p>
+        <p>Email your headcount, locations, and what you already know or suspect — or send it on WhatsApp. The founder reads both directly, replies within a day, and will tell you honestly if your organization is too small for the exposure to justify the scan.</p>
         <div class="cta-row">
-          <a class="btn btn-gold" href="mailto:mohamed.fayd5589@gmail.com?subject=Shadow%20Ledger%20%E2%80%94%20our%20exposure&body=Hi%20Muhammad%2C%0A%0AWe%20want%20to%20see%20our%20shadow%20AI%20exposure%20before%20a%20regulator%20does.%0A%0ACompany%20size%3A%0AWhere%20AI%20is%20known%20to%20be%20used%3A%0AWho%20would%20own%20the%20policy%3A%0A%0A%E2%80%94%20%5Bname%5D">Open the ledger</a>
+          <a class="btn btn-gold" href="mailto:mohamed.fayd5589@gmail.com?subject=Shadow%20Ledger%20%E2%80%94%20the%20scan&body=Hi%20Muhammad%2C%0A%0AWe%20want%20the%20scan%3A%0A%0ACompany%3A%0AHeadcount%20and%20locations%3A%0AWhat%20we%20already%20know%20or%20suspect%20about%20AI%20usage%3A%0A%0A%E2%80%94%20%5Bname%5D">Request the scan</a>
           <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp · 01152701025</a>
         </div>
-        <p class="slot-line">$2,900 FIXED · ONE LEDGER PER WEEK · Next table opens <b id="slotLine">Monday</b> · credits to Growth within 60 days</p>
+        <p class="slot-line">THE INVENTORY, THE GRADES, THE MEMO · Next window opens <b id="slotLine">Monday</b> · $2,900 fixed · one organization · credits to Growth within 60 days</p>
       </div>
     </section>
 
@@ -387,7 +469,7 @@
   <!-- ============ FOOTER ============ -->
   <footer class="dm-footer">
     <div class="container">
-      <p class="footer-slogan">If it's <strong>unsanctioned</strong>, it's still <strong>running</strong>.</p>
+      <p class="footer-slogan">If the ledger can be <strong>written</strong> before the question is <strong>asked</strong>, the fine never arrives.</p>
       <div class="sig-name">
         <p><span class="peach-strong">Muhammad Fayd</span> · Founder, Opsynta Engine</p>
         <p><a href="mailto:mohamed.fayd5589@gmail.com">mohamed.fayd5589@gmail.com</a> · <a class="gold-tel" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp 01152701025</a></p>
@@ -397,7 +479,7 @@
 
   <script src="js/utm.js"></script>
   <script>
-    // ---- personalization: forwarded from quiz results / DM links ----
+    // ---- personalization: forwarded from DM links / quiz routing ----
     (function () {
       var q = {};
       try {
@@ -407,13 +489,17 @@
         });
       } catch (e) {}
       var el = document.getElementById('scoreLine');
-      if (el && q.feed) {
-        el.textContent = 'YOUR SEAM: ' + q.feed + ' — the ledger grades every use that touches it.';
+      if (el && (q.people || q.tools)) {
+        var line = 'YOUR ORGANIZATION: ';
+        if (q.people) line += '~' + q.people + ' people';
+        if (q.tools) line += (q.people ? ' · ' : '') + 'known tools: ' + q.tools;
+        line += ' — the survey finds the rest.';
+        el.textContent = line;
         el.style.display = 'block';
       }
     })();
 
-    // ---- next opening: the coming Monday (1 ledger/week cadence) ----
+    // ---- next opening: the coming Monday (1 window/week cadence) ----
     (function () {
       function fmt(d) {
         var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -424,7 +510,7 @@
       var add = (day === 1 && now.getHours() < 12) ? 0 : ((8 - day) % 7 || 7);
       var next = new Date(now.getTime() + add * 86400000);
       var label = fmt(next);
-      ['nextSlot', 'slotLine'].forEach(function (id) {
+      ['nextSlot', 'faqSlot', 'slotLine'].forEach(function (id) {
         var el = document.getElementById(id);
         if (el) el.textContent = label;
       });
