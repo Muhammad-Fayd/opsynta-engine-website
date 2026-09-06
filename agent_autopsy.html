@@ -3,17 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Agent Autopsy — Opsynta Engine</title>
-  <meta name="description" content="You're about to ship an AI agent that cost $40K–$120K to build. Who verified it — the team that built it? The Agent Autopsy is the pre-launch verification sprint the market doesn't sell: seven days, $4,500 fixed, a failure-mode battery, a severity-ranked defect register, and a go/no-go verdict." />
-  <meta property="og:title" content="The Agent Autopsy — Opsynta Engine" />
-  <meta property="og:description" content="Prompt injection, tool misuse, hallucination rate on your actual corpus, refusal behavior, data boundaries — adversarially tested before your launch, not after your incident. Seven days, $4,500 fixed, go/no-go verdict with the launch-blocking defects enumerated." />
+  <title>The Agent Autopsy â€” Opsynta Engine</title>
+  <meta name="description" content="You're about to ship an AI agent that cost $40Kâ€“$120K to build. Who verified it â€” the team that built it? The Agent Autopsy is the pre-launch verification sprint the market doesn't sell: seven days, $4,500 fixed, a failure-mode battery, a severity-ranked defect register, and a go/no-go verdict." />
+  <meta property="og:title" content="The Agent Autopsy â€” Opsynta Engine" />
+  <meta property="og:description" content="Prompt injection, tool misuse, hallucination rate on your actual corpus, refusal behavior, data boundaries â€” adversarially tested before your launch, not after your incident. Seven days, $4,500 fixed, go/no-go verdict with the launch-blocking defects enumerated." />
   <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://muhammad-fayd.github.io/opsynta-engine-website/assets/og-agent.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Opsynta â€” the six-door Diagnostic Grid, this door highlighted" />
+    <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%230A0F23'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%2300C2FF'/%3E%3Cpath d='M24 44 L32 14 L40 44 M27 34 L37 34' fill='none' stroke='%23D4AF37' stroke-width='2.5'/%3E%3C/svg%3E" />
   <style>
-    /* ============ DUSK ATLAS — self-contained (no stylesheet dependency) ============ */
+    /* ============ DUSK ATLAS â€” self-contained (no stylesheet dependency) ============ */
     :root {
       --navy: #0A0F23; --panel: #0E1530; --panel-2: #101938;
       --peach: #FAE4CF; --peach-dim: rgba(250,228,207,.62); --peach-faint: rgba(250,228,207,.38);
@@ -102,7 +108,7 @@
     .price-notes { list-style: none; }
     .price-notes li { padding: 11px 0 11px 26px; position: relative; color: var(--peach-dim); font-size: 15px; border-bottom: 1px solid var(--line-soft); }
     .price-notes li:last-child { border-bottom: none; }
-    .price-notes li::before { content: "→"; position: absolute; left: 0; color: var(--gold); font-family: var(--mono); }
+    .price-notes li::before { content: "â†’"; position: absolute; left: 0; color: var(--gold); font-family: var(--mono); }
     .price-notes li strong { color: var(--peach); }
     .price-anchor { background: var(--cyan-dim); border: 1px solid rgba(0,194,255,.25); border-radius: 12px; padding: 20px 22px; font-size: 14px; color: var(--peach-dim); align-self: start; }
     .price-anchor .mono { color: var(--cyan); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; display: block; margin-bottom: 8px; }
@@ -125,7 +131,7 @@
     .faq-item { border-bottom: 1px solid var(--line-soft); }
     .faq-item summary { cursor: pointer; padding: 20px 0; font-size: 17px; font-weight: 600; color: var(--peach); list-style: none; display: flex; justify-content: space-between; gap: 18px; }
     .faq-item summary::after { content: "+"; font-family: var(--mono); color: var(--gold); font-size: 18px; }
-    .faq-item[open] summary::after { content: "–"; }
+    .faq-item[open] summary::after { content: "â€“"; }
     .faq-item .faq-a { padding: 0 0 22px; color: var(--peach-dim); font-size: 15px; max-width: 820px; }
     .faq-item .faq-a strong { color: var(--peach); }
 
@@ -186,18 +192,18 @@
     <section class="hero">
       <div class="container">
         <p class="eyebrow">
-          <span class="pill">Opsynta · The Agent Autopsy</span>
-          <span class="pill pill-meta">7 working days · one agent</span>
+          <span class="pill">Opsynta Â· The Agent Autopsy</span>
+          <span class="pill pill-meta">7 working days Â· one agent</span>
           <span class="pill pill-meta">$4,500 fixed</span>
         </p>
-        <h1 class="hero-title">You're about to ship an agent.<br /><em>Who verified it — the team that built it?</em></h1>
-        <p class="lead">The build cost $40,000–$120,000. The market that verifies it currently sells $500–$2,000 checklist audits — templates a model could fill in. Nobody is running an adversarial failure-mode battery against your agent before it meets your customers. The Agent Autopsy is that missing product: seven working days, one agent in staging, dissected across <strong>prompt injection, tool misuse, hallucination rate on your actual corpus, refusal and escalation behavior, and data boundaries</strong> — returning a severity-ranked defect register and a <strong>go/no-go verdict</strong>, priced below 10% of the build it protects.</p>
+        <h1 class="hero-title">You're about to ship an agent.<br /><em>Who verified it â€” the team that built it?</em></h1>
+        <p class="lead">The build cost $40,000â€“$120,000. The market that verifies it currently sells $500â€“$2,000 checklist audits â€” templates a model could fill in. Nobody is running an adversarial failure-mode battery against your agent before it meets your customers. The Agent Autopsy is that missing product: seven working days, one agent in staging, dissected across <strong>prompt injection, tool misuse, hallucination rate on your actual corpus, refusal and escalation behavior, and data boundaries</strong> â€” returning a severity-ranked defect register and a <strong>go/no-go verdict</strong>, priced below 10% of the build it protects.</p>
         <p class="score-line mono" id="scoreLine"></p>
         <div class="hero-cta">
           <a class="btn btn-gold" href="mailto:mohamed.fayd5589@gmail.com?subject=Agent%20Autopsy%20%E2%80%94%20the%20launch&body=Hi%20Muhammad%2C%0A%0AHere%27s%20the%20agent%3A%0A%0ACompany%20%2F%20team%3A%0AWhat%20the%20agent%20does%20%28its%20job%29%3A%0ALaunch%20window%3A%0AStaging%20access%20%2F%20who%20built%20it%3A%0A%0A%E2%80%94%20%5Bname%5D">Send the agent</a>
-          <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp · 01152701025</a>
+          <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp Â· +20 115 270 1025</a>
         </div>
-        <p class="hero-capacity">One autopsy per week. Next table opens <b id="nextSlot">Monday</b>. GO or NO-GO, in writing, with the launch-blocking defects enumerated — before the launch, not after the incident.</p>
+        <p class="hero-capacity">One autopsy per week. Next table opens <b id="nextSlot">Monday</b>. GO or NO-GO, in writing, with the launch-blocking defects enumerated â€” before the launch, not after the incident.</p>
       </div>
     </section>
 
@@ -206,21 +212,21 @@
       <div class="container">
         <p class="section-tag">The question your launch review won't ask</p>
         <h2 class="display">"It works in the demo. What does it do under attack?"</h2>
-        <p class="lead body-copy" style="margin-bottom: 8px;">Your builders tested that the agent <strong>works</strong> — happy paths, acceptance criteria, the demo script. Nobody systematically tested where it <strong>breaks</strong>: what a crafted prompt convinces it to do, which tool it misuses when confused, how often it hallucinates on your real corpus, what it leaks across data boundaries, whether it escalates or improvises when it should refuse. The agent audit market is real and growing — the current supply just isn't adversarial.</p>
+        <p class="lead body-copy" style="margin-bottom: 8px;">Your builders tested that the agent <strong>works</strong> â€” happy paths, acceptance criteria, the demo script. Nobody systematically tested where it <strong>breaks</strong>: what a crafted prompt convinces it to do, which tool it misuses when confused, how often it hallucinates on your real corpus, what it leaks across data boundaries, whether it escalates or improvises when it should refuse. The agent audit market is real and growing â€” the current supply just isn't adversarial.</p>
         <div class="stats-band">
           <div class="stat-card">
-            <p class="stat-number">$0.4B → $0.6B</p>
-            <p class="stat-label">the AI agent audit and assurance market, 2025 to 2026 — verification demand is growing faster than the agents it watches; almost none of it serves pre-launch</p>
+            <p class="stat-number">$0.4B â†’ $0.6B</p>
+            <p class="stat-label">the AI agent audit and assurance market, 2025 to 2026 â€” verification demand is growing faster than the agents it watches; almost none of it serves pre-launch</p>
             <p class="stat-src">Fact.MR, Jun 2026</p>
           </div>
           <div class="stat-card">
-            <p class="stat-number">$40–120K</p>
-            <p class="stat-label">the typical cost of the agent build itself — the asset this autopsy protects. Verification below 10% of build cost is the cheapest insurance in the market</p>
+            <p class="stat-number">$40â€“120K</p>
+            <p class="stat-label">the typical cost of the agent build itself â€” the asset this autopsy protects. Verification below 10% of build cost is the cheapest insurance in the market</p>
             <p class="stat-src">industry build-cost guides, 2026</p>
           </div>
           <div class="stat-card">
-            <p class="stat-number">$500–$2K</p>
-            <p class="stat-label">what today's pre-implementation "audits" cost — checklist-level reviews, no adversarial battery, no corpus-grounded hallucination sampling, no go/no-go</p>
+            <p class="stat-number">$500â€“$2K</p>
+            <p class="stat-label">what today's pre-implementation "audits" cost â€” checklist-level reviews, no adversarial battery, no corpus-grounded hallucination sampling, no go/no-go</p>
             <p class="stat-src">current verification supply, 2026</p>
           </div>
         </div>
@@ -232,27 +238,27 @@
       <div class="container">
         <p class="section-tag">What comes back on Day 7</p>
         <h2 class="display">A verdict, not a QA report.</h2>
-        <p class="lead body-copy" style="margin-bottom: 30px;">Four artifacts. One agent. Written for the decision the whole sprint exists to serve: <strong>ship it, or don't</strong> — with the evidence either way.</p>
+        <p class="lead body-copy" style="margin-bottom: 30px;">Four artifacts. One agent. Written for the decision the whole sprint exists to serve: <strong>ship it, or don't</strong> â€” with the evidence either way.</p>
         <div class="grid-2">
           <div class="deliv-card">
-            <p class="deliv-num">01 · THE FAILURE-MODE BATTERY</p>
+            <p class="deliv-num">01 Â· THE FAILURE-MODE BATTERY</p>
             <h3>Where it breaks, on record</h3>
-            <p>Adversarial and failure-mode testing across five fronts — <strong>prompt injection, tool misuse, hallucination rate on the agent's actual corpus, refusal and escalation behavior, data-boundary probes</strong>. Each test documented: the input, the behavior, the severity. Your builders can challenge any finding and re-run any test — that's the point.</p>
+            <p>Adversarial and failure-mode testing across five fronts â€” <strong>prompt injection, tool misuse, hallucination rate on the agent's actual corpus, refusal and escalation behavior, data-boundary probes</strong>. Each test documented: the input, the behavior, the severity. Your builders can challenge any finding and re-run any test â€” that's the point.</p>
           </div>
           <div class="deliv-card">
-            <p class="deliv-num">02 · THE SCORECARD</p>
+            <p class="deliv-num">02 Â· THE SCORECARD</p>
             <h3>Accuracy and drift, your criteria</h3>
-            <p>Corpus-grounded accuracy sampling against <strong>the agent's own success criteria</strong> — the numbers your team defined, measured instead of assumed — plus drift indicators across inputs and time, so the score is a baseline, not a snapshot disguised as one.</p>
+            <p>Corpus-grounded accuracy sampling against <strong>the agent's own success criteria</strong> â€” the numbers your team defined, measured instead of assumed â€” plus drift indicators across inputs and time, so the score is a baseline, not a snapshot disguised as one.</p>
           </div>
           <div class="deliv-card">
-            <p class="deliv-num">03 · THE DEFECT REGISTER</p>
+            <p class="deliv-num">03 Â· THE DEFECT REGISTER</p>
             <h3>Severity-ranked, launch-sorted</h3>
-            <p>Every finding ranked and sorted into <strong>launch-blocking versus acceptable-risk</strong>, each with a reproduction path and an estimated fix surface. The register is the artifact your engineering team argues with for a week — productively, before launch instead of after an incident.</p>
+            <p>Every finding ranked and sorted into <strong>launch-blocking versus acceptable-risk</strong>, each with a reproduction path and an estimated fix surface. The register is the artifact your engineering team argues with for a week â€” productively, before launch instead of after an incident.</p>
           </div>
           <div class="deliv-card">
-            <p class="deliv-num">04 · THE GO/NO-GO VERDICT</p>
+            <p class="deliv-num">04 Â· THE GO/NO-GO VERDICT</p>
             <h3>One line, plus the retest plan</h3>
-            <p>The verdict rendered against the register: <strong>GO</strong> — with the acceptable-risk list attached — or <strong>NO-GO</strong>, with the blocking defects enumerated and a regression protocol so the retest is a procedure, not a debate. No live-system warranties; the verdict is scoped to the tested build and test date, in writing.</p>
+            <p>The verdict rendered against the register: <strong>GO</strong> â€” with the acceptable-risk list attached â€” or <strong>NO-GO</strong>, with the blocking defects enumerated and a regression protocol so the retest is a procedure, not a debate. No live-system warranties; the verdict is scoped to the tested build and test date, in writing.</p>
           </div>
         </div>
       </div>
@@ -266,7 +272,7 @@
         <div style="margin-top: 22px;">
           <div class="vert-row">
             <p class="vert-name">Injection</p>
-            <p class="vert-seam"><strong>Crafted prompts that hijack the plan.</strong> "Ignore previous instructions" is the toy version; the battery runs structured injection against your agent's actual tool access — what it can be convinced to do, and with what authority.</p>
+            <p class="vert-seam"><strong>Crafted prompts that hijack the plan.</strong> "Ignore previous instructions" is the toy version; the battery runs structured injection against your agent's actual tool access â€” what it can be convinced to do, and with what authority.</p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Tool misuse</p>
@@ -274,7 +280,7 @@
           </div>
           <div class="vert-row">
             <p class="vert-name">Hallucination</p>
-            <p class="vert-seam"><strong>Measured on your corpus, not a benchmark.</strong> The rate that matters is against your actual documents and products — sampled, scored, and reported with confidence intervals instead of vendor-benchmark folklore.</p>
+            <p class="vert-seam"><strong>Measured on your corpus, not a benchmark.</strong> The rate that matters is against your actual documents and products â€” sampled, scored, and reported with confidence intervals instead of vendor-benchmark folklore.</p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Refusal</p>
@@ -282,7 +288,7 @@
           </div>
           <div class="vert-row">
             <p class="vert-name">Boundaries</p>
-            <p class="vert-seam"><strong>Data it was never supposed to touch.</strong> Cross-tenant leakage, context poisoning between sessions, sensitive fields reaching logs or third-party calls — probed deliberately, because finding it accidentally is the alternative.</p>
+            <p class="vert-seam"><strong>Data it was never supposed to touch.</strong> Cross-tenant leakage, context poisoning between sessions, sensitive fields reaching logs or third-party calls â€” probed deliberately, because finding it accidentally is the alternative.</p>
           </div>
         </div>
       </div>
@@ -297,15 +303,15 @@
           <div class="day-row">
             <p class="day-tag">DAY 01</p>
             <div class="day-body">
-              <h4>Intake — the specimen arrives</h4>
+              <h4>Intake â€” the specimen arrives</h4>
               <p>The agent spec, its success criteria as your team wrote them, tool and data boundaries, staging access, and one interview with the builders. The gap between "what it's supposed to do" and "what it was built to do" is where the battery aims first.</p>
             </div>
           </div>
           <div class="day-row">
-            <p class="day-tag">DAYS 02–04</p>
+            <p class="day-tag">DAYS 02â€“04</p>
             <div class="day-body">
               <h4>Battery execution</h4>
-              <p>The five fronts, fired in structured order: failure-mode tests, corpus-grounded accuracy sampling, injection and boundary probes. Every test logged — input, behavior, severity — so every finding is reproducible and challengeable by your engineers.</p>
+              <p>The five fronts, fired in structured order: failure-mode tests, corpus-grounded accuracy sampling, injection and boundary probes. Every test logged â€” input, behavior, severity â€” so every finding is reproducible and challengeable by your engineers.</p>
             </div>
           </div>
           <div class="day-row">
@@ -319,14 +325,14 @@
             <p class="day-tag">DAY 06</p>
             <div class="day-body">
               <h4>Regression register and retest protocol</h4>
-              <p>The defects documented as regression cases — so the fix-verify cycle is a procedure your team runs without me — plus the retest protocol that governs whether a NO-GO converts to a GO after repairs.</p>
+              <p>The defects documented as regression cases â€” so the fix-verify cycle is a procedure your team runs without me â€” plus the retest protocol that governs whether a NO-GO converts to a GO after repairs.</p>
             </div>
           </div>
           <div class="day-row">
             <p class="day-tag">DAY 07</p>
             <div class="day-body">
               <h4>Verdict and readout</h4>
-              <p>A 60-minute recorded readout: the verdict, the register, the scorecard — and, only if defects found it and you want it, the engineering bridge where fixes route into a Growth engagement. The verdict is rendered before the bridge is discussed. Contractually.</p>
+              <p>A 60-minute recorded readout: the verdict, the register, the scorecard â€” and, only if defects found it and you want it, the engineering bridge where fixes route into a Growth engagement. The verdict is rendered before the bridge is discussed. Contractually.</p>
             </div>
           </div>
         </div>
@@ -336,21 +342,21 @@
     <!-- ============ PRICING ============ -->
     <section class="section" id="price">
       <div class="container">
-        <p class="section-tag">One price · one agent · one verdict</p>
+        <p class="section-tag">One price Â· one agent Â· one verdict</p>
         <h2 class="display">$4,500. Fixed. GO or NO-GO.</h2>
         <div class="price-panel">
-          <p class="price-figure">$4,500 <span>fixed · 7 working days</span></p>
+          <p class="price-figure">$4,500 <span>fixed Â· 7 working days</span></p>
           <div class="price-cols">
             <ul class="price-notes">
-              <li><strong>Priced below 10% of the $40K–$120K build it protects</strong> — the cheapest insurance in a verification market that currently sells checklists. If the build cost less than $50K all-in, we should talk before you book; the ratio has to make sense for you.</li>
-              <li><strong>If the verdict surfaces launch-blocking defects and you start a Growth engagement ($4,000) within 60 days, the full $4,500 is credited to it</strong> — the autopsy becomes the first payment on the hardening.</li>
+              <li><strong>Priced below 10% of the $40Kâ€“$120K build it protects</strong> â€” the cheapest insurance in a verification market that currently sells checklists. If the build cost less than $50K all-in, we should talk before you book; the ratio has to make sense for you.</li>
+              <li><strong>If the verdict surfaces launch-blocking defects and you start a Growth engagement ($4,000) within 60 days, the full $4,500 is credited to it</strong> â€” the autopsy becomes the first payment on the hardening.</li>
               <li><strong>The verdict is scoped to the tested build and test date; no live-system warranties.</strong> The regression protocol ships with every verdict so re-verification after fixes is a procedure, not a dispute.</li>
               <li><strong>Builder firms and dev shops: the 70/30 partner split applies.</strong> Sell independent verification into your client work at your price; Opsynta delivers the battery. Your QA claims stop being claims.</li>
               <li>100% prepaid. One agent autopsy per week, maximum. Your table is reserved the moment the invoice is paid.</li>
             </ul>
             <aside class="price-anchor">
               <span class="mono">The alternative</span>
-              The unverified launch: the agent works in the demo, meets your customers, and <strong>meets its first crafted prompt in production</strong> — where the incident costs the $40–120K build, the client relationship, and the internal credibility for every future agent. The current "audit" supply at <strong>$500–$2,000 is checklist-level</strong>: no adversarial battery, no corpus sampling, no verdict you can hold in your hand. This is the product that fills that gap before it fills a postmortem.
+              The unverified launch: the agent works in the demo, meets your customers, and <strong>meets its first crafted prompt in production</strong> â€” where the incident costs the $40â€“120K build, the client relationship, and the internal credibility for every future agent. The current "audit" supply at <strong>$500â€“$2,000 is checklist-level</strong>: no adversarial battery, no corpus sampling, no verdict you can hold in your hand. This is the product that fills that gap before it fills a postmortem.
             </aside>
           </div>
         </div>
@@ -361,9 +367,9 @@
     <section class="section" id="founder">
       <div class="container">
         <div class="founder-note">
-          <p>Every agent builder I meet says the same sentence: "we tested it." What they mean is happy paths — the demo script, the acceptance checklist, the cases the team thought of. The graveyard is in the other set: the cases nobody thought of, found by someone whose job is to think of them adversarially.</p>
-          <p>So this is the adversarial set, run by me personally, on your agent, in staging, before it ships. The verdict — GO or NO-GO — is mine to sign, and the NO-GO path is a delivered product, not a failed engagement: you get the blocking defects, the reproduction paths, and the retest protocol. The market sizes agent assurance at $600 million and growing, and almost none of it sits in front of the launch. It sits behind the incident. The refusal is the credential.</p>
-          <p class="founder-sig">MUHAMMAD FAYD · FOUNDER, OPSYNTA ENGINE</p>
+          <p>Every agent builder I meet says the same sentence: "we tested it." What they mean is happy paths â€” the demo script, the acceptance checklist, the cases the team thought of. The graveyard is in the other set: the cases nobody thought of, found by someone whose job is to think of them adversarially.</p>
+          <p>So this is the adversarial set, run by me personally, on your agent, in staging, before it ships. The verdict â€” GO or NO-GO â€” is mine to sign, and the NO-GO path is a delivered product, not a failed engagement: you get the blocking defects, the reproduction paths, and the retest protocol. The market sizes agent assurance at $600 million and growing, and almost none of it sits in front of the launch. It sits behind the incident. The refusal is the credential.</p>
+          <p class="founder-sig">MUHAMMAD FAYD Â· FOUNDER, OPSYNTA ENGINE</p>
         </div>
       </div>
     </section>
@@ -374,38 +380,38 @@
         <p class="section-tag">Questions you should ask</p>
         <h2 class="display">Straight answers.</h2>
         <div style="margin-top: 24px;">
-          <div class="faq-item">
+          <details class="faq-item">
             <summary>Our team already QA'd it. Isn't this duplicative?</summary>
-            <p class="faq-a">Your builders tested that it <strong>works</strong> — that's their job, and the happy paths need to pass. The battery tests where it <strong>breaks</strong>: injection, misuse, hallucination on your corpus, boundary leakage. Builders systematically under-test their own failure surface — not from negligence, but because you can't adversarially attack the thing you're rooting for. That's why the verdict comes from outside the build team. Independent verification isn't an insult to your QA; it's the thing that makes your QA claims credible.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">Your builders tested that it <strong>works</strong> â€” that's their job, and the happy paths need to pass. The battery tests where it <strong>breaks</strong>: injection, misuse, hallucination on your corpus, boundary leakage. Builders systematically under-test their own failure surface â€” not from negligence, but because you can't adversarially attack the thing you're rooting for. That's why the verdict comes from outside the build team. Independent verification isn't an insult to your QA; it's the thing that makes your QA claims credible.</p>
+          </details>
+          <details class="faq-item">
             <summary>What if the verdict is NO-GO?</summary>
-            <p class="faq-a">Then you just made the most valuable decision of the launch cycle: <strong>not shipping the public failure</strong>. The NO-GO deliverable is complete — the launch-blocking defects enumerated with reproduction paths, the regression register, the retest protocol that converts a fixed agent into a GO. The alternative timeline is the same defects discovered by a customer, an attacker, or the press. The verdict is scoped and honest; the refusal is the product.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">Then you just made the most valuable decision of the launch cycle: <strong>not shipping the public failure</strong>. The NO-GO deliverable is complete â€” the launch-blocking defects enumerated with reproduction paths, the regression register, the retest protocol that converts a fixed agent into a GO. The alternative timeline is the same defects discovered by a customer, an attacker, or the press. The verdict is scoped and honest; the refusal is the product.</p>
+          </details>
+          <details class="faq-item">
             <summary>We're a dev shop that builds agents for clients. Why would we pay for this?</summary>
-            <p class="faq-a">Because <strong>"independently verified before launch" is a line your competitors can't put in a proposal</strong> — and the 70/30 split means you sell the verification at your price and keep 70%. Your client gets a go/no-go with an adversarial battery behind it; you get an external signature on your QA claims and a differentiation that prices. The failure modes this finds are the ones that end client relationships when the client finds them first.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">Because <strong>"independently verified before launch" is a line your competitors can't put in a proposal</strong> â€” and the 70/30 split means you sell the verification at your price and keep 70%. Your client gets a go/no-go with an adversarial battery behind it; you get an external signature on your QA claims and a differentiation that prices. The failure modes this finds are the ones that end client relationships when the client finds them first.</p>
+          </details>
+          <details class="faq-item">
             <summary>What access do you need, and how is it secured?</summary>
-            <p class="faq-a"><strong>Staging access only — never production credentials.</strong> The agent's spec, its success criteria, tool and data boundaries, and an environment where the battery can fire safely. Findings are delivered under the engagement's confidentiality terms; nothing is retained beyond the deliverables. If the agent can't be sandboxed, that fact itself is a Day-1 finding about your launch readiness.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a"><strong>Staging access only â€” never production credentials.</strong> The agent's spec, its success criteria, tool and data boundaries, and an environment where the battery can fire safely. Findings are delivered under the engagement's confidentiality terms; nothing is retained beyond the deliverables. If the agent can't be sandboxed, that fact itself is a Day-1 finding about your launch readiness.</p>
+          </details>
+          <details class="faq-item">
             <summary>What if the battery finds nothing serious?</summary>
-            <p class="faq-a">Then your launch carries something almost no agent launch has: <strong>a documented adversarial pass with a GO verdict attached</strong> — dated, scoped, signed. That document has a way of mattering at enterprise sales conversations, diligence reviews, and insurance discussions, where "we tested it" is an anecdote and a verified verdict is an artifact. And honestly, in a market this young, finding nothing is the rare outcome worth paying to know.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">Then your launch carries something almost no agent launch has: <strong>a documented adversarial pass with a GO verdict attached</strong> â€” dated, scoped, signed. That document has a way of mattering at enterprise sales conversations, diligence reviews, and insurance discussions, where "we tested it" is an anecdote and a verified verdict is an artifact. And honestly, in a market this young, finding nothing is the rare outcome worth paying to know.</p>
+          </details>
+          <details class="faq-item">
             <summary>Why $4,500?</summary>
-            <p class="faq-a">Three anchors. It's <strong>under 10% of the typical $40–120K build</strong> it protects — the insurance ratio that makes the decision easy. It's an order of magnitude above the $500–$2,000 checklist audits because the battery is an order of magnitude more work: days of adversarial execution and corpus sampling, not a template. And the full fee credits into a Growth engagement within 60 days if the verdict surfaces defects you want fixed properly — the autopsy becomes the down payment on the hardening.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">Three anchors. It's <strong>under 10% of the typical $40â€“120K build</strong> it protects â€” the insurance ratio that makes the decision easy. It's an order of magnitude above the $500â€“$2,000 checklist audits because the battery is an order of magnitude more work: days of adversarial execution and corpus sampling, not a template. And the full fee credits into a Growth engagement within 60 days if the verdict surfaces defects you want fixed properly â€” the autopsy becomes the down payment on the hardening.</p>
+          </details>
+          <details class="faq-item">
             <summary>Can you test an agent that's already live?</summary>
-            <p class="faq-a">Not with the battery — <strong>firing adversarial tests at a live system is the incident you're trying to prevent</strong>. Live agents get a scoped variant: passive review of logs and incident history, boundary and configuration analysis, and a prioritized register of what the battery <em>would</em> test in staging. It's useful; it is not the verdict. The full product needs a sandbox. That constraint is a feature of the method, not a limitation of it.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">Not with the battery â€” <strong>firing adversarial tests at a live system is the incident you're trying to prevent</strong>. Live agents get a scoped variant: passive review of logs and incident history, boundary and configuration analysis, and a prioritized register of what the battery <em>would</em> test in staging. It's useful; it is not the verdict. The full product needs a sandbox. That constraint is a feature of the method, not a limitation of it.</p>
+          </details>
+          <details class="faq-item">
             <summary>Who delivers it, and when can you start?</summary>
-            <p class="faq-a">The founder — personally, which is why capacity is capped at <strong>one agent autopsy per week</strong>. The next table opens <strong id="faqSlot">Monday</strong>; after that, the following week or the waitlist. Payment is 100% on booking, so your table is reserved the moment the invoice is paid — and the verdict lands before your launch window, or we don't take the engagement.</p>
-          </div>
+            <p class="faq-a">The founder â€” personally, which is why capacity is capped at <strong>one agent autopsy per week</strong>. The next table opens <strong id="faqSlot">Monday</strong>; after that, the following week or the waitlist. Payment is 100% on booking, so your table is reserved the moment the invoice is paid â€” and the verdict lands before your launch window, or we don't take the engagement.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -418,27 +424,27 @@
         <div style="margin-top: 22px;">
           <div class="vert-row">
             <p class="vert-name">Exploring</p>
-            <p class="vert-seam"><strong>The Deep Map</strong> — one seam, five days, $2,500, board-ready business case · <a href="deepmap.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Deep Map</strong> â€” one seam, five days, $2,500, board-ready business case Â· <a href="deepmap.html">open this door</a></p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Failed</p>
-            <p class="vert-seam"><strong>The Pilot Autopsy</strong> — kill-or-fix verdict on a dead AI pilot, five days, $3,500 · <a href="pilot_autopsy.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Pilot Autopsy</strong> â€” kill-or-fix verdict on a dead AI pilot, five days, $3,500 Â· <a href="pilot_autopsy.html">open this door</a></p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Overspending</p>
-            <p class="vert-seam"><strong>The Inference Autopsy</strong> — one AI bill, five days, $2,500, savings guaranteed · <a href="inference_autopsy.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Inference Autopsy</strong> â€” one AI bill, five days, $2,500, savings guaranteed Â· <a href="inference_autopsy.html">open this door</a></p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Exposed</p>
-            <p class="vert-seam"><strong>The Shadow Ledger</strong> — shadow-AI and EU AI Act exposure, seven days, $2,900 · <a href="shadow_ledger.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Shadow Ledger</strong> â€” shadow-AI and EU AI Act exposure, seven days, $2,900 Â· <a href="shadow_ledger.html">open this door</a></p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Shipping</p>
-            <p class="vert-seam"><strong>The Agent Autopsy</strong> — pre-launch verification of one AI agent, seven days, $4,500 · you are here</p>
+            <p class="vert-seam"><strong>The Agent Autopsy</strong> â€” pre-launch verification of one AI agent, seven days, $4,500 Â· you are here</p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Committed</p>
-            <p class="vert-seam"><strong>The Opsynta Cycle</strong> — standing monthly measurement of your seam, $1,500/mo · <a href="opsynta_cycle.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Opsynta Cycle</strong> â€” standing monthly measurement of your seam, $1,500/mo Â· <a href="opsynta_cycle.html">open this door</a></p>
           </div>
         </div>
       </div>
@@ -448,12 +454,12 @@
     <section class="final-cta" id="book">
       <div class="container">
         <h2>Send the agent.</h2>
-        <p>Email what the agent does, your launch window, and where it's staged — or send it on WhatsApp. The founder reads both directly, replies within a day, and will tell you honestly if the agent or the timeline isn't ready for a battery.</p>
+        <p>Email what the agent does, your launch window, and where it's staged â€” or send it on WhatsApp. The founder reads both directly, replies within a day, and will tell you honestly if the agent or the timeline isn't ready for a battery.</p>
         <div class="cta-row">
           <a class="btn btn-gold" href="mailto:mohamed.fayd5589@gmail.com?subject=Agent%20Autopsy%20%E2%80%94%20the%20launch&body=Hi%20Muhammad%2C%0A%0AHere%27s%20the%20agent%3A%0A%0ACompany%20%2F%20team%3A%0AWhat%20the%20agent%20does%20%28its%20job%29%3A%0ALaunch%20window%3A%0AStaging%20access%20%2F%20who%20built%20it%3A%0A%0A%E2%80%94%20%5Bname%5D">Send the agent</a>
-          <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp · 01152701025</a>
+          <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp Â· +20 115 270 1025</a>
         </div>
-        <p class="slot-line">GO OR NO-GO. BEFORE THE LAUNCH. · Next table opens <b id="slotLine">Monday</b> · $4,500 fixed · credits to Growth within 60 days · builder firms: 70/30</p>
+        <p class="slot-line">GO OR NO-GO. BEFORE THE LAUNCH. Â· Next table opens <b id="slotLine">Monday</b> Â· $4,500 fixed Â· credits to Growth within 60 days Â· builder firms: 70/30</p>
       </div>
     </section>
 
@@ -464,8 +470,8 @@
     <div class="container">
       <p class="footer-slogan">If the agent can be <strong>autopsied</strong> before launch, it won't die <strong>in public</strong>.</p>
       <div class="sig-name">
-        <p><span class="peach-strong">Muhammad Fayd</span> · Founder, Opsynta Engine</p>
-        <p><a href="mailto:mohamed.fayd5589@gmail.com">mohamed.fayd5589@gmail.com</a> · <a class="gold-tel" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp 01152701025</a></p>
+        <p><span class="peach-strong">Muhammad Fayd</span> Â· Founder, Opsynta Engine</p>
+        <p><a href="mailto:mohamed.fayd5589@gmail.com">mohamed.fayd5589@gmail.com</a> Â· <a class="gold-tel" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp +20 115 270 1025</a></p>
       </div>
     </div>
   </footer>
@@ -485,8 +491,8 @@
       if (el && (q.agent || q.launch)) {
         var line = 'YOUR AGENT: ';
         if (q.agent) line += q.agent;
-        if (q.launch) line += (q.agent ? ' · ' : '') + 'launch window: ' + q.launch;
-        line += ' — verify it before it ships.';
+        if (q.launch) line += (q.agent ? ' Â· ' : '') + 'launch window: ' + q.launch;
+        line += ' â€” verify it before it ships.';
         el.textContent = line;
         el.style.display = 'block';
       }

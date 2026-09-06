@@ -3,17 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Pilot Autopsy — Opsynta Engine</title>
-  <meta name="description" content="MIT says 95% of AI pilots return nothing. The Pilot Autopsy is the postmortem nobody sells: one failed pilot, five working days, $3,500 fixed — a kill-or-fix verdict, the failure mode that killed it, and a salvage balance sheet for what's reusable." />
-  <meta property="og:title" content="The Pilot Autopsy — Opsynta Engine" />
-  <meta property="og:description" content="Your AI pilot died. Five days. $3,500 fixed. Kill-or-fix verdict with the evidence — and the full fee credits toward the salvage if the verdict is FIX." />
+  <title>The Pilot Autopsy â€” Opsynta Engine</title>
+  <meta name="description" content="MIT says 95% of AI pilots return nothing. The Pilot Autopsy is the postmortem nobody sells: one failed pilot, five working days, $3,500 fixed â€” a kill-or-fix verdict, the failure mode that killed it, and a salvage balance sheet for what's reusable." />
+  <meta property="og:title" content="The Pilot Autopsy â€” Opsynta Engine" />
+  <meta property="og:description" content="Your AI pilot died. Five days. $3,500 fixed. Kill-or-fix verdict with the evidence â€” and the full fee credits toward the salvage if the verdict is FIX." />
   <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://muhammad-fayd.github.io/opsynta-engine-website/assets/og-pilot.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Opsynta â€” the six-door Diagnostic Grid, this door highlighted" />
+    <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%230A0F23'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%23D4AF37'/%3E%3Cellipse cx='32' cy='32' rx='26' ry='10' fill='none' stroke='%23FAE4CF' stroke-width='2' transform='rotate(30 32 32)'/%3E%3C/svg%3E" />
   <style>
-    /* ============ DUSK ATLAS — self-contained (no stylesheet dependency) ============ */
+    /* ============ DUSK ATLAS â€” self-contained (no stylesheet dependency) ============ */
     :root {
       --navy: #0A0F23; --panel: #0E1530; --panel-2: #101938;
       --peach: #FAE4CF; --peach-dim: rgba(250,228,207,.62); --peach-faint: rgba(250,228,207,.38);
@@ -102,7 +108,7 @@
     .price-notes { list-style: none; }
     .price-notes li { padding: 11px 0 11px 26px; position: relative; color: var(--peach-dim); font-size: 15px; border-bottom: 1px solid var(--line-soft); }
     .price-notes li:last-child { border-bottom: none; }
-    .price-notes li::before { content: "→"; position: absolute; left: 0; color: var(--gold); font-family: var(--mono); }
+    .price-notes li::before { content: "â†’"; position: absolute; left: 0; color: var(--gold); font-family: var(--mono); }
     .price-notes li strong { color: var(--peach); }
     .price-anchor { background: var(--cyan-dim); border: 1px solid rgba(0,194,255,.25); border-radius: 12px; padding: 20px 22px; font-size: 14px; color: var(--peach-dim); align-self: start; }
     .price-anchor .mono { color: var(--cyan); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; display: block; margin-bottom: 8px; }
@@ -125,7 +131,7 @@
     .faq-item { border-bottom: 1px solid var(--line-soft); }
     .faq-item summary { cursor: pointer; padding: 20px 0; font-size: 17px; font-weight: 600; color: var(--peach); list-style: none; display: flex; justify-content: space-between; gap: 18px; }
     .faq-item summary::after { content: "+"; font-family: var(--mono); color: var(--gold); font-size: 18px; }
-    .faq-item[open] summary::after { content: "–"; }
+    .faq-item[open] summary::after { content: "â€“"; }
     .faq-item .faq-a { padding: 0 0 22px; color: var(--peach-dim); font-size: 15px; max-width: 820px; }
     .faq-item .faq-a strong { color: var(--peach); }
 
@@ -186,16 +192,16 @@
     <section class="hero">
       <div class="container">
         <p class="eyebrow">
-          <span class="pill">Opsynta · The Pilot Autopsy</span>
-          <span class="pill pill-meta">5 working days · one pilot</span>
+          <span class="pill">Opsynta Â· The Pilot Autopsy</span>
+          <span class="pill pill-meta">5 working days Â· one pilot</span>
           <span class="pill pill-meta">$3,500 fixed</span>
         </p>
         <h1 class="hero-title">MIT says 95% of AI pilots fail.<br /><em>Bring me yours.</em></h1>
-        <p class="lead">Your pilot died — quietly shelved, "paused for reprioritization," or still limping at a fraction of the promised number. Everyone sells you the <strong>before</strong>: readiness checks, discovery sprints, "validate before you build." Nobody sells the <strong>after</strong>. The Pilot Autopsy is the postmortem the market doesn't offer: in five working days, one failed pilot is dissected into a <strong>kill-or-fix verdict</strong>, the specific failure mode that killed it, and a salvage balance sheet for everything you already paid for.</p>
+        <p class="lead">Your pilot died â€” quietly shelved, "paused for reprioritization," or still limping at a fraction of the promised number. Everyone sells you the <strong>before</strong>: readiness checks, discovery sprints, "validate before you build." Nobody sells the <strong>after</strong>. The Pilot Autopsy is the postmortem the market doesn't offer: in five working days, one failed pilot is dissected into a <strong>kill-or-fix verdict</strong>, the specific failure mode that killed it, and a salvage balance sheet for everything you already paid for.</p>
         <p class="score-line mono" id="scoreLine"></p>
         <div class="hero-cta">
           <a class="btn btn-gold" href="mailto:mohamed.fayd5589@gmail.com?subject=Pilot%20Autopsy%20%E2%80%94%20the%20body&body=Hi%20Muhammad%2C%0A%0AWe%20have%20a%20dead%20AI%20pilot.%20Here%27s%20the%20body%3A%0A%0ACompany%20%2F%20team%3A%0AWhat%20the%20pilot%20was%20supposed%20to%20do%3A%0AWhat%20it%20actually%20did%20%28or%20when%20it%20died%29%3A%0ARoughly%20what%20we%20spent%3A%0A%0A%E2%80%94%20%5Bname%5D">Email the body</a>
-          <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp · 01152701025</a>
+          <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp Â· +20 115 270 1025</a>
         </div>
         <p class="hero-capacity">Two autopsies per week. Next table opens <b id="nextSlot">Monday</b>. If the verdict is FIX, the full fee credits toward a Growth start within 60 days.</p>
       </div>
@@ -206,22 +212,22 @@
       <div class="container">
         <p class="section-tag">The question nobody will answer honestly</p>
         <h2 class="display">"It didn't work. Now what?"</h2>
-        <p class="lead body-copy" style="margin-bottom: 8px;">You already know the question your board is really asking: was it the technology, the vendor, or us? The vendor says the model is fine. The consultant wants to sell you the next phase. The team that built it has moved on. The failure sits in the middle of your organization like an unexamined patient — and the autopsy numbers say you are not alone.</p>
+        <p class="lead body-copy" style="margin-bottom: 8px;">You already know the question your board is really asking: was it the technology, the vendor, or us? The vendor says the model is fine. The consultant wants to sell you the next phase. The team that built it has moved on. The failure sits in the middle of your organization like an unexamined patient â€” and the autopsy numbers say you are not alone.</p>
         <div class="stats-band">
           <div class="stat-card">
             <p class="stat-number">95%</p>
-            <p class="stat-label">of enterprise GenAI pilots produced zero measurable return — the buyers in this cohort have budget, urgency, and a visible failure</p>
+            <p class="stat-label">of enterprise GenAI pilots produced zero measurable return â€” the buyers in this cohort have budget, urgency, and a visible failure</p>
             <p class="stat-src">MIT NANDA via Fortune, 2025</p>
           </div>
           <div class="stat-card">
-            <p class="stat-number">60–80%</p>
-            <p class="stat-label">of a failed pilot's resources are consumed before it dies — most of what you spent is salvageable, if someone accounts for it</p>
+            <p class="stat-number">60â€“80%</p>
+            <p class="stat-label">of a failed pilot's resources are consumed before it dies â€” most of what you spent is salvageable, if someone accounts for it</p>
             <p class="stat-src">CloudFactory analysis of MIT data</p>
           </div>
           <div class="stat-card">
-            <p class="stat-number">$60–200K</p>
-            <p class="stat-label">the typical budget already burned before "paused indefinitely" — the autopsy costs a single-digit percentage of it</p>
-            <p class="stat-src">cancelled-project analyses, 2025–26</p>
+            <p class="stat-number">$60â€“200K</p>
+            <p class="stat-label">the typical budget already burned before "paused indefinitely" â€” the autopsy costs a single-digit percentage of it</p>
+            <p class="stat-src">cancelled-project analyses, 2025â€“26</p>
           </div>
         </div>
       </div>
@@ -232,27 +238,27 @@
       <div class="container">
         <p class="section-tag">What comes back on Day 5</p>
         <h2 class="display">A verdict, not a postmortem essay.</h2>
-        <p class="lead body-copy" style="margin-bottom: 30px;">Four artifacts. One pilot. Written to be shown to a board — because that is who is asking.</p>
+        <p class="lead body-copy" style="margin-bottom: 30px;">Four artifacts. One pilot. Written to be shown to a board â€” because that is who is asking.</p>
         <div class="grid-2">
           <div class="deliv-card">
-            <p class="deliv-num">01 · THE VERDICT</p>
-            <h3>Kill it — or fix it</h3>
-            <p>One word at the top of page one, with the evidence behind it. <strong>KILL</strong>: stop paying, stop pretending, reallocate the budget with a clean conscience. <strong>FIX</strong>: the specific repair, what it costs, what it returns. The verdict is rendered <strong>before any follow-on work is discussed</strong> — that is a contract term, not a courtesy.</p>
+            <p class="deliv-num">01 Â· THE VERDICT</p>
+            <h3>Kill it â€” or fix it</h3>
+            <p>One word at the top of page one, with the evidence behind it. <strong>KILL</strong>: stop paying, stop pretending, reallocate the budget with a clean conscience. <strong>FIX</strong>: the specific repair, what it costs, what it returns. The verdict is rendered <strong>before any follow-on work is discussed</strong> â€” that is a contract term, not a courtesy.</p>
           </div>
           <div class="deliv-card">
-            <p class="deliv-num">02 · THE FAILURE-MODE MAP</p>
+            <p class="deliv-num">02 Â· THE FAILURE-MODE MAP</p>
             <h3>Which of the five killed it</h3>
-            <p>Data quality, workflow integration, adoption, vendor overpromise, or unit economics — the autopsy instruments all five and shows the evidence trail for each, so your team can <strong>challenge the verdict line by line</strong> instead of arguing about it in the abstract.</p>
+            <p>Data quality, workflow integration, adoption, vendor overpromise, or unit economics â€” the autopsy instruments all five and shows the evidence trail for each, so your team can <strong>challenge the verdict line by line</strong> instead of arguing about it in the abstract.</p>
           </div>
           <div class="deliv-card">
-            <p class="deliv-num">03 · THE SALVAGE BALANCE SHEET</p>
+            <p class="deliv-num">03 Â· THE SALVAGE BALANCE SHEET</p>
             <h3>What your burn is still worth</h3>
-            <p>The code, the data pipeline, the contracts, the learnings, the internal credibility — each item accounted as <strong>reusable, repairable, or write-off</strong>. Most failed pilots are 60–80% consumed before death; most companies write off 100%. The difference is this document.</p>
+            <p>The code, the data pipeline, the contracts, the learnings, the internal credibility â€” each item accounted as <strong>reusable, repairable, or write-off</strong>. Most failed pilots are 60â€“80% consumed before death; most companies write off 100%. The difference is this document.</p>
           </div>
           <div class="deliv-card">
-            <p class="deliv-num">04 · THE ACCOUNTABILITY REVIEW</p>
+            <p class="deliv-num">04 Â· THE ACCOUNTABILITY REVIEW</p>
             <h3>If a vendor built it</h3>
-            <p>What was promised against what was delivered, in their own words from the proposal and your own numbers from production — a <strong>factual ledger</strong> for the renegotiation, the warranty conversation, or the clean exit. Not a lawsuit; leverage.</p>
+            <p>What was promised against what was delivered, in their own words from the proposal and your own numbers from production â€” a <strong>factual ledger</strong> for the renegotiation, the warranty conversation, or the clean exit. Not a lawsuit; leverage.</p>
           </div>
         </div>
       </div>
@@ -266,11 +272,11 @@
         <div style="margin-top: 22px;">
           <div class="vert-row">
             <p class="vert-name">Data quality</p>
-            <p class="vert-seam"><strong>The model wasn't wrong — the inputs were.</strong> Dirty source data, missing fields, stale context. The pilot starved before it could fail.</p>
+            <p class="vert-seam"><strong>The model wasn't wrong â€” the inputs were.</strong> Dirty source data, missing fields, stale context. The pilot starved before it could fail.</p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Workflow</p>
-            <p class="vert-seam"><strong>It worked — and nobody could use it.</strong> The seam it automated didn't exist in the workflow that actually runs. Output went to a queue nobody owns.</p>
+            <p class="vert-seam"><strong>It worked â€” and nobody could use it.</strong> The seam it automated didn't exist in the workflow that actually runs. Output went to a queue nobody owns.</p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Adoption</p>
@@ -282,7 +288,7 @@
           </div>
           <div class="vert-row">
             <p class="vert-name">Unit economics</p>
-            <p class="vert-seam"><strong>It worked, and it still lost money.</strong> Cost per task never crossed under the human baseline — the pilot was born unprofitable and nobody ran the number.</p>
+            <p class="vert-seam"><strong>It worked, and it still lost money.</strong> Cost per task never crossed under the human baseline â€” the pilot was born unprofitable and nobody ran the number.</p>
           </div>
         </div>
       </div>
@@ -297,8 +303,8 @@
           <div class="day-row">
             <p class="day-tag">DAY 01</p>
             <div class="day-body">
-              <h4>Intake — the body arrives</h4>
-              <p>Three interviews — the owner, the builder, one intended user — plus the artifacts of death: the original business case, whatever dashboards exist, the vendor's proposal, the invoices. The story and the paper rarely agree. That's the first finding.</p>
+              <h4>Intake â€” the body arrives</h4>
+              <p>Three interviews â€” the owner, the builder, one intended user â€” plus the artifacts of death: the original business case, whatever dashboards exist, the vendor's proposal, the invoices. The story and the paper rarely agree. That's the first finding.</p>
             </div>
           </div>
           <div class="day-row">
@@ -311,22 +317,22 @@
           <div class="day-row">
             <p class="day-tag">DAY 03</p>
             <div class="day-body">
-              <h4>Friction mapping — where it died</h4>
-              <p>The seam-by-seam walk: which boundary killed it — data in, workflow out, or human in between — priced in the same ledger format Opsynta uses for every diagnosis, so the failure has a dollar sign attached.</p>
+              <h4>Friction mapping â€” where it died</h4>
+              <p>The seam-by-seam walk: which boundary killed it â€” data in, workflow out, or human in between â€” priced in the same ledger format Opsynta uses for every diagnosis, so the failure has a dollar sign attached.</p>
             </div>
           </div>
           <div class="day-row">
             <p class="day-tag">DAY 04</p>
             <div class="day-body">
               <h4>The salvage accounting</h4>
-              <p>Every asset from the burn — code, data, contracts, learnings — marked reusable, repairable, or write-off, with the repair priced where the verdict is trending FIX.</p>
+              <p>Every asset from the burn â€” code, data, contracts, learnings â€” marked reusable, repairable, or write-off, with the repair priced where the verdict is trending FIX.</p>
             </div>
           </div>
           <div class="day-row">
             <p class="day-tag">DAY 05</p>
             <div class="day-body">
               <h4>Verdict and readout</h4>
-              <p>A 60-minute recorded readout: the verdict, the failure mode, the salvage sheet, and — only if the verdict is FIX and you want it — the Growth bridge. The decision is rendered before the bridge is discussed. Contractually.</p>
+              <p>A 60-minute recorded readout: the verdict, the failure mode, the salvage sheet, and â€” only if the verdict is FIX and you want it â€” the Growth bridge. The decision is rendered before the bridge is discussed. Contractually.</p>
             </div>
           </div>
         </div>
@@ -336,21 +342,21 @@
     <!-- ============ PRICING ============ -->
     <section class="section" id="price">
       <div class="container">
-        <p class="section-tag">One price · one page · one approver</p>
+        <p class="section-tag">One price Â· one page Â· one approver</p>
         <h2 class="display">$3,500. Fixed. Verdict first.</h2>
         <div class="price-panel">
-          <p class="price-figure">$3,500 <span>fixed · 5 working days</span></p>
+          <p class="price-figure">$3,500 <span>fixed Â· 5 working days</span></p>
           <div class="price-cols">
             <ul class="price-notes">
-              <li><strong>The verdict is rendered before any follow-on work may be discussed</strong> — the term is in the engagement letter. The credit-back never buys a flattering autopsy.</li>
+              <li><strong>The verdict is rendered before any follow-on work may be discussed</strong> â€” the term is in the engagement letter. The credit-back never buys a flattering autopsy.</li>
               <li><strong>If the verdict is FIX and you start Growth within 60 days, the full $3,500 is credited to it.</strong> The postmortem becomes the first payment on the repair.</li>
-              <li><strong>If the verdict is KILL, you just made a five-figure decision for $3,500</strong> — with a document that ends the internal debate permanently.</li>
+              <li><strong>If the verdict is KILL, you just made a five-figure decision for $3,500</strong> â€” with a document that ends the internal debate permanently.</li>
               <li><strong>Two autopsies per week, maximum.</strong> The founder performs every one. Capacity is capped so the verdict stays worth reading.</li>
               <li>100% prepaid. Your table is reserved the moment the invoice is paid.</li>
             </ul>
             <aside class="price-anchor">
               <span class="mono">The alternative</span>
-              The unexamined failure: <strong>$60,000–$200,000 already burned</strong>, a second vendor quoting the next phase against lessons nobody wrote down, and a team that will quietly sandbag the next AI initiative. Independent readiness assessments start at <strong>$15,000</strong> — for the *next* pilot. This is the only offer in the market priced for the one that already died.
+              The unexamined failure: <strong>$60,000â€“$200,000 already burned</strong>, a second vendor quoting the next phase against lessons nobody wrote down, and a team that will quietly sandbag the next AI initiative. Independent readiness assessments start at <strong>$15,000</strong> â€” for the *next* pilot. This is the only offer in the market priced for the one that already died.
             </aside>
           </div>
         </div>
@@ -362,8 +368,8 @@
       <div class="container">
         <div class="founder-note">
           <p>I built the Deep Map because 95% of AI pilots fail when teams deploy before mapping. I built the Pilot Autopsy because the other side of that statistic had no seller: everyone quotes MIT's number on their landing pages and then sells you the "before" product. Nobody shows up for the after.</p>
-          <p>So this is the after. I run every autopsy personally, I read the vendor's proposal against your production numbers myself, and the verdict — kill or fix — is mine to sign. If the honest answer is "kill it and reallocate," you'll hear it on Day 5 with the evidence, not softened for the credit. The refusal is the credential.</p>
-          <p class="founder-sig">MUHAMMAD FAYD · FOUNDER, OPSYNTA ENGINE</p>
+          <p>So this is the after. I run every autopsy personally, I read the vendor's proposal against your production numbers myself, and the verdict â€” kill or fix â€” is mine to sign. If the honest answer is "kill it and reallocate," you'll hear it on Day 5 with the evidence, not softened for the credit. The refusal is the credential.</p>
+          <p class="founder-sig">MUHAMMAD FAYD Â· FOUNDER, OPSYNTA ENGINE</p>
         </div>
       </div>
     </section>
@@ -374,38 +380,38 @@
         <p class="section-tag">Questions you should ask</p>
         <h2 class="display">Straight answers.</h2>
         <div style="margin-top: 24px;">
-          <div class="faq-item">
+          <details class="faq-item">
             <summary>Isn't this just blame consulting?</summary>
-            <p class="faq-a">No — it's the opposite. Blame consulting ends in a deck about what your organization did wrong. The autopsy ends in <strong>a verdict and a balance sheet</strong>: kill or fix, and what the burn is still worth. There is no organizational politics section, because nobody buys this to assign blame internally; they buy it to end the debate.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">No â€” it's the opposite. Blame consulting ends in a deck about what your organization did wrong. The autopsy ends in <strong>a verdict and a balance sheet</strong>: kill or fix, and what the burn is still worth. There is no organizational politics section, because nobody buys this to assign blame internally; they buy it to end the debate.</p>
+          </details>
+          <details class="faq-item">
             <summary>What if the verdict is "kill"?</summary>
-            <p class="faq-a">Then you've made a clean five-figure decision for $3,500, with a document that says why — in evidence, not opinion — and a salvage sheet that recovers what can be recovered. Most companies let dead pilots linger for quarters while the budget line survives on hope. The kill verdict is <strong>the most valuable page in the document</strong>, and it's priced like the cheapest one.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">Then you've made a clean five-figure decision for $3,500, with a document that says why â€” in evidence, not opinion â€” and a salvage sheet that recovers what can be recovered. Most companies let dead pilots linger for quarters while the budget line survives on hope. The kill verdict is <strong>the most valuable page in the document</strong>, and it's priced like the cheapest one.</p>
+          </details>
+          <details class="faq-item">
             <summary>Our vendor says the pilot "needs one more phase."</summary>
-            <p class="faq-a">Then the Accountability Review is for you. The autopsy places <strong>their proposal's numbers next to your production numbers</strong> — accuracy claims, latency, volume — and lets the gap speak. If the vendor is right, the verdict will say FIX and their next phase gets a fair hearing on my evidence. If they're not, you'll have the ledger for the renegotiation. Either way, you'll know.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">Then the Accountability Review is for you. The autopsy places <strong>their proposal's numbers next to your production numbers</strong> â€” accuracy claims, latency, volume â€” and lets the gap speak. If the vendor is right, the verdict will say FIX and their next phase gets a fair hearing on my evidence. If they're not, you'll have the ledger for the renegotiation. Either way, you'll know.</p>
+          </details>
+          <details class="faq-item">
             <summary>What do you need from us?</summary>
-            <p class="faq-a">About four hours of your team's time across the week — the three Day-1 interviews, and one person reachable for questions — plus the paper trail: the business case, the vendor proposal, invoices, whatever dashboards or logs survive. <strong>If the pilot left no traces, that fact is already a finding</strong>, and it usually points at the adoption failure mode.</p>
-          </div>
-          <div class="faq-item">
-            <summary>Why $3,500 — and how does the credit work?</summary>
-            <p class="faq-a">$3,500 sits inside the market's verified audit band ($2,500–$5,000) and reads as a rounding error against the $60K–$200K already burned. If the verdict is <strong>FIX and you start a Growth engagement within 60 days</strong>, the full fee credits toward it — the postmortem becomes the down payment on the repair it prescribed. If the verdict is KILL, there is no credit, because there is nothing to credit — you keep the verdict.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">About four hours of your team's time across the week â€” the three Day-1 interviews, and one person reachable for questions â€” plus the paper trail: the business case, the vendor proposal, invoices, whatever dashboards or logs survive. <strong>If the pilot left no traces, that fact is already a finding</strong>, and it usually points at the adoption failure mode.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why $3,500 â€” and how does the credit work?</summary>
+            <p class="faq-a">$3,500 sits inside the market's verified audit band ($2,500â€“$5,000) and reads as a rounding error against the $60Kâ€“$200K already burned. If the verdict is <strong>FIX and you start a Growth engagement within 60 days</strong>, the full fee credits toward it â€” the postmortem becomes the down payment on the repair it prescribed. If the verdict is KILL, there is no credit, because there is nothing to credit â€” you keep the verdict.</p>
+          </details>
+          <details class="faq-item">
             <summary>Doesn't the credit mean you want the verdict to be FIX?</summary>
-            <p class="faq-a">This is the right question, and the answer is structural: <strong>the verdict is contractually rendered before any follow-on engagement may be discussed</strong>, and a standalone KILL verdict must still deliver findings worth the fee. The credit is a discount for acting on the map — not a contingency on flattering it. Any firm that can't say that in writing shouldn't be doing autopsies.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">This is the right question, and the answer is structural: <strong>the verdict is contractually rendered before any follow-on engagement may be discussed</strong>, and a standalone KILL verdict must still deliver findings worth the fee. The credit is a discount for acting on the map â€” not a contingency on flattering it. Any firm that can't say that in writing shouldn't be doing autopsies.</p>
+          </details>
+          <details class="faq-item">
             <summary>The pilot is "paused," not officially dead. Still applicable?</summary>
-            <p class="faq-a">That's the majority case. "Paused indefinitely" is how failed pilots look inside organizations that haven't decided yet. The autopsy is how the decision gets made — with evidence — instead of being deferred until the budget line quietly disappears. Paused pilots make the best bodies: everything is still there, and nobody has started rewriting the history yet.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">That's the majority case. "Paused indefinitely" is how failed pilots look inside organizations that haven't decided yet. The autopsy is how the decision gets made â€” with evidence â€” instead of being deferred until the budget line quietly disappears. Paused pilots make the best bodies: everything is still there, and nobody has started rewriting the history yet.</p>
+          </details>
+          <details class="faq-item">
             <summary>Who delivers it, and when can you start?</summary>
-            <p class="faq-a">The founder — personally, which is why capacity is capped at <strong>two autopsies per week</strong>. The next table opens <strong id="faqSlot">Monday</strong>; after that, the following week's slots or the waitlist. Payment is 100% on booking, so your table is reserved the moment the invoice is paid.</p>
-          </div>
+            <p class="faq-a">The founder â€” personally, which is why capacity is capped at <strong>two autopsies per week</strong>. The next table opens <strong id="faqSlot">Monday</strong>; after that, the following week's slots or the waitlist. Payment is 100% on booking, so your table is reserved the moment the invoice is paid.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -418,27 +424,27 @@
         <div style="margin-top: 22px;">
           <div class="vert-row">
             <p class="vert-name">Exploring</p>
-            <p class="vert-seam"><strong>The Deep Map</strong> — one seam, five days, $2,500, board-ready business case · <a href="deepmap.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Deep Map</strong> â€” one seam, five days, $2,500, board-ready business case Â· <a href="deepmap.html">open this door</a></p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Failed</p>
-            <p class="vert-seam"><strong>The Pilot Autopsy</strong> — kill-or-fix verdict on a dead AI pilot, five days, $3,500 · you are here</p>
+            <p class="vert-seam"><strong>The Pilot Autopsy</strong> â€” kill-or-fix verdict on a dead AI pilot, five days, $3,500 Â· you are here</p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Overspending</p>
-            <p class="vert-seam"><strong>The Inference Autopsy</strong> — one AI bill, five days, $2,500, savings guaranteed · <a href="inference_autopsy.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Inference Autopsy</strong> â€” one AI bill, five days, $2,500, savings guaranteed Â· <a href="inference_autopsy.html">open this door</a></p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Exposed</p>
-            <p class="vert-seam"><strong>The Shadow Ledger</strong> — shadow-AI and EU AI Act exposure, seven days, $2,900 · <a href="shadow_ledger.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Shadow Ledger</strong> â€” shadow-AI and EU AI Act exposure, seven days, $2,900 Â· <a href="shadow_ledger.html">open this door</a></p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Shipping</p>
-            <p class="vert-seam"><strong>The Agent Autopsy</strong> — pre-launch verification of one AI agent, seven days, $4,500 · <a href="agent_autopsy.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Agent Autopsy</strong> â€” pre-launch verification of one AI agent, seven days, $4,500 Â· <a href="agent_autopsy.html">open this door</a></p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Committed</p>
-            <p class="vert-seam"><strong>The Opsynta Cycle</strong> — standing monthly measurement of your seam, $1,500/mo · <a href="opsynta_cycle.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Opsynta Cycle</strong> â€” standing monthly measurement of your seam, $1,500/mo Â· <a href="opsynta_cycle.html">open this door</a></p>
           </div>
         </div>
       </div>
@@ -448,12 +454,12 @@
     <section class="final-cta" id="book">
       <div class="container">
         <h2>Bring me the body.</h2>
-        <p>Email the pilot that died — what it was supposed to do, what actually happened, roughly what it cost — or send it on WhatsApp. The founder reads both directly, replies within a day, and will tell you honestly if the pilot isn't worth an autopsy.</p>
+        <p>Email the pilot that died â€” what it was supposed to do, what actually happened, roughly what it cost â€” or send it on WhatsApp. The founder reads both directly, replies within a day, and will tell you honestly if the pilot isn't worth an autopsy.</p>
         <div class="cta-row">
           <a class="btn btn-gold" href="mailto:mohamed.fayd5589@gmail.com?subject=Pilot%20Autopsy%20%E2%80%94%20the%20body&body=Hi%20Muhammad%2C%0A%0AWe%20have%20a%20dead%20AI%20pilot.%20Here%27s%20the%20body%3A%0A%0ACompany%20%2F%20team%3A%0AWhat%20the%20pilot%20was%20supposed%20to%20do%3A%0AWhat%20it%20actually%20did%20%28or%20when%20it%20died%29%3A%0ARoughly%20what%20we%20spent%3A%0A%0A%E2%80%94%20%5Bname%5D">Email the body</a>
-          <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp · 01152701025</a>
+          <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp Â· +20 115 270 1025</a>
         </div>
-        <p class="slot-line">KILL OR FIX. IN WRITING. · Next table opens <b id="slotLine">Monday</b> · $3,500 fixed · credits to Growth within 60 days if the verdict is FIX</p>
+        <p class="slot-line">KILL OR FIX. IN WRITING. Â· Next table opens <b id="slotLine">Monday</b> Â· $3,500 fixed Â· credits to Growth within 60 days if the verdict is FIX</p>
       </div>
     </section>
 
@@ -464,8 +470,8 @@
     <div class="container">
       <p class="footer-slogan">If the pilot can be <strong>autopsied</strong>, the next one won't join the <strong>95%</strong>.</p>
       <div class="sig-name">
-        <p><span class="peach-strong">Muhammad Fayd</span> · Founder, Opsynta Engine</p>
-        <p><a href="mailto:mohamed.fayd5589@gmail.com">mohamed.fayd5589@gmail.com</a> · <a class="gold-tel" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp 01152701025</a></p>
+        <p><span class="peach-strong">Muhammad Fayd</span> Â· Founder, Opsynta Engine</p>
+        <p><a href="mailto:mohamed.fayd5589@gmail.com">mohamed.fayd5589@gmail.com</a> Â· <a class="gold-tel" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp +20 115 270 1025</a></p>
       </div>
     </div>
   </footer>
@@ -485,8 +491,8 @@
       if (el && (q.pilot || q.mode)) {
         var line = 'YOUR PILOT: ';
         if (q.pilot) line += q.pilot;
-        if (q.mode) line += (q.pilot ? ' · ' : '') + 'suspected failure mode: ' + q.mode;
-        line += ' — bring the body, get the verdict.';
+        if (q.mode) line += (q.pilot ? ' Â· ' : '') + 'suspected failure mode: ' + q.mode;
+        line += ' â€” bring the body, get the verdict.';
         el.textContent = line;
         el.style.display = 'block';
       }

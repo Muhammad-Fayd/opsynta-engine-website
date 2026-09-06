@@ -3,17 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Inference Autopsy — Opsynta Engine</title>
-  <meta name="description" content="Your AI bill is $1K–$20K a month and nobody will audit it — the LLM-cost consultancies start at $20K spenders. The Inference Autopsy is the audit for the ignored middle: one bill, five working days, $2,500 fixed, with a written savings guarantee." />
-  <meta property="og:title" content="The Inference Autopsy — Opsynta Engine" />
-  <meta property="og:description" content="30–60% of your AI bill is recoverable. Everyone audits $20K+/month spenders — nobody shows you which part of yours leaks. Five days, $2,500 fixed, savings guaranteed to exceed the fee or the next diagnostic is free." />
+  <title>The Inference Autopsy â€” Opsynta Engine</title>
+  <meta name="description" content="Your AI bill is $1Kâ€“$20K a month and nobody will audit it â€” the LLM-cost consultancies start at $20K spenders. The Inference Autopsy is the audit for the ignored middle: one bill, five working days, $2,500 fixed, with a written savings guarantee." />
+  <meta property="og:title" content="The Inference Autopsy â€” Opsynta Engine" />
+  <meta property="og:description" content="30â€“60% of your AI bill is recoverable. Everyone audits $20K+/month spenders â€” nobody shows you which part of yours leaks. Five days, $2,500 fixed, savings guaranteed to exceed the fee or the next diagnostic is free." />
   <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://muhammad-fayd.github.io/opsynta-engine-website/assets/og-inference.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Opsynta â€” the six-door Diagnostic Grid, this door highlighted" />
+    <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%230A0F23'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%23D4AF37'/%3E%3Cellipse cx='32' cy='32' rx='26' ry='10' fill='none' stroke='%2300C2FF' stroke-width='2' transform='rotate(30 32 32)'/%3E%3C/svg%3E" />
   <style>
-    /* ============ DUSK ATLAS — self-contained (no stylesheet dependency) ============ */
+    /* ============ DUSK ATLAS â€” self-contained (no stylesheet dependency) ============ */
     :root {
       --navy: #0A0F23; --panel: #0E1530; --panel-2: #101938;
       --peach: #FAE4CF; --peach-dim: rgba(250,228,207,.62); --peach-faint: rgba(250,228,207,.38);
@@ -102,7 +108,7 @@
     .price-notes { list-style: none; }
     .price-notes li { padding: 11px 0 11px 26px; position: relative; color: var(--peach-dim); font-size: 15px; border-bottom: 1px solid var(--line-soft); }
     .price-notes li:last-child { border-bottom: none; }
-    .price-notes li::before { content: "→"; position: absolute; left: 0; color: var(--gold); font-family: var(--mono); }
+    .price-notes li::before { content: "â†’"; position: absolute; left: 0; color: var(--gold); font-family: var(--mono); }
     .price-notes li strong { color: var(--peach); }
     .price-anchor { background: var(--cyan-dim); border: 1px solid rgba(0,194,255,.25); border-radius: 12px; padding: 20px 22px; font-size: 14px; color: var(--peach-dim); align-self: start; }
     .price-anchor .mono { color: var(--cyan); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; display: block; margin-bottom: 8px; }
@@ -125,7 +131,7 @@
     .faq-item { border-bottom: 1px solid var(--line-soft); }
     .faq-item summary { cursor: pointer; padding: 20px 0; font-size: 17px; font-weight: 600; color: var(--peach); list-style: none; display: flex; justify-content: space-between; gap: 18px; }
     .faq-item summary::after { content: "+"; font-family: var(--mono); color: var(--gold); font-size: 18px; }
-    .faq-item[open] summary::after { content: "–"; }
+    .faq-item[open] summary::after { content: "â€“"; }
     .faq-item .faq-a { padding: 0 0 22px; color: var(--peach-dim); font-size: 15px; max-width: 820px; }
     .faq-item .faq-a strong { color: var(--peach); }
 
@@ -186,18 +192,18 @@
     <section class="hero">
       <div class="container">
         <p class="eyebrow">
-          <span class="pill">Opsynta · The Inference Autopsy</span>
-          <span class="pill pill-meta">5 working days · one bill</span>
+          <span class="pill">Opsynta Â· The Inference Autopsy</span>
+          <span class="pill pill-meta">5 working days Â· one bill</span>
           <span class="pill pill-meta">$2,500 fixed</span>
         </p>
-        <h1 class="hero-title">30–60% of your AI bill<br /><em>is recoverable.</em> Nobody will show you which part.</h1>
-        <p class="lead">Your inference bill went from experiment to line item — $1K to $20K a month, rising quietly, split across providers nobody has time to interrogate. The LLM-cost consultancies exist, but their floor is <strong>$20K+ monthly spend</strong>. The audit market has left the middle unserved on purpose: too small for them, too real for you. The Inference Autopsy is the product for that gap — five working days, one bill, dissected into a routing map, a caching plan, a renegotiation pack, and an engineer-ready implementation plan <strong>your team executes without me</strong>.</p>
+        <h1 class="hero-title">30â€“60% of your AI bill<br /><em>is recoverable.</em> Nobody will show you which part.</h1>
+        <p class="lead">Your inference bill went from experiment to line item â€” $1K to $20K a month, rising quietly, split across providers nobody has time to interrogate. The LLM-cost consultancies exist, but their floor is <strong>$20K+ monthly spend</strong>. The audit market has left the middle unserved on purpose: too small for them, too real for you. The Inference Autopsy is the product for that gap â€” five working days, one bill, dissected into a routing map, a caching plan, a renegotiation pack, and an engineer-ready implementation plan <strong>your team executes without me</strong>.</p>
         <p class="score-line mono" id="scoreLine"></p>
         <div class="hero-cta">
           <a class="btn btn-gold" href="mailto:mohamed.fayd5589@gmail.com?subject=Inference%20Autopsy%20%E2%80%94%20the%20bill&body=Hi%20Muhammad%2C%0A%0AHere%27s%20the%20bill%3A%0A%0ACompany%20%2F%20team%3A%0AProviders%20and%20models%20we%20pay%20for%3A%0ARough%20monthly%20spend%3A%0AWho%20owns%20the%20bill%20internally%3A%0A%0A%E2%80%94%20%5Bname%5D">Send the bill</a>
-          <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp · 01152701025</a>
+          <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp Â· +20 115 270 1025</a>
         </div>
-        <p class="hero-capacity">Two autopsies per week. Next table opens <b id="nextSlot">Monday</b>. Savings guaranteed to exceed the fee within 90 days of implementation — or your next diagnostic is free.</p>
+        <p class="hero-capacity">Two autopsies per week. Next table opens <b id="nextSlot">Monday</b>. Savings guaranteed to exceed the fee within 90 days of implementation â€” or your next diagnostic is free.</p>
       </div>
     </section>
 
@@ -206,21 +212,21 @@
       <div class="container">
         <p class="section-tag">The question nobody below $20K gets asked</p>
         <h2 class="display">"It went up again. Is anyone auditing it?"</h2>
-        <p class="lead body-copy" style="margin-bottom: 8px;">Every call your team makes has a purpose: classification, extraction, reasoning, generation, embedding. The savings research is consistent — the biggest single lever is <strong>routing</strong>: a cheap model for the classification calls, a capable model only where reasoning actually happens. But nobody runs that inventory on a $4K bill, because the firms that can price it won't. So the bill compounds, and the levers sit unpulled.</p>
+        <p class="lead body-copy" style="margin-bottom: 8px;">Every call your team makes has a purpose: classification, extraction, reasoning, generation, embedding. The savings research is consistent â€” the biggest single lever is <strong>routing</strong>: a cheap model for the classification calls, a capable model only where reasoning actually happens. But nobody runs that inventory on a $4K bill, because the firms that can price it won't. So the bill compounds, and the levers sit unpulled.</p>
         <div class="stats-band">
           <div class="stat-card">
-            <p class="stat-number">30–60%</p>
-            <p class="stat-label">savings consistently available on production LLM traffic — routing, caching, and dead-call elimination — before any renegotiation</p>
-            <p class="stat-src">LLM cost optimization engagements, 2025–26</p>
+            <p class="stat-number">30â€“60%</p>
+            <p class="stat-label">savings consistently available on production LLM traffic â€” routing, caching, and dead-call elimination â€” before any renegotiation</p>
+            <p class="stat-src">LLM cost optimization engagements, 2025â€“26</p>
           </div>
           <div class="stat-card">
-            <p class="stat-number">60–90%</p>
-            <p class="stat-label">of enterprise AI spend reported as overspend in industry surveys — the middle market carries the same ratio with no audit supply</p>
+            <p class="stat-number">60â€“90%</p>
+            <p class="stat-label">of enterprise AI spend reported as overspend in industry surveys â€” the middle market carries the same ratio with no audit supply</p>
             <p class="stat-src">enterprise AI spend surveys, 2025</p>
           </div>
           <div class="stat-card">
             <p class="stat-number">$20K+</p>
-            <p class="stat-label">the monthly-spend floor every named LLM-cost consultancy starts at — the ignored middle is this product's entire reason to exist</p>
+            <p class="stat-label">the monthly-spend floor every named LLM-cost consultancy starts at â€” the ignored middle is this product's entire reason to exist</p>
             <p class="stat-src">published engagement floors, 2026</p>
           </div>
         </div>
@@ -232,27 +238,27 @@
       <div class="container">
         <p class="section-tag">What comes back on Day 5</p>
         <h2 class="display">A bill that is now a map.</h2>
-        <p class="lead body-copy" style="margin-bottom: 30px;">Four artifacts. One invoice. Written so your engineer can act on them Monday morning — <strong>without Opsynta in the loop</strong>, because the implementation plan is the deliverable, not the retainer.</p>
+        <p class="lead body-copy" style="margin-bottom: 30px;">Four artifacts. One invoice. Written so your engineer can act on them Monday morning â€” <strong>without Opsynta in the loop</strong>, because the implementation plan is the deliverable, not the retainer.</p>
         <div class="grid-2">
           <div class="deliv-card">
-            <p class="deliv-num">01 · THE ROUTE INVENTORY</p>
+            <p class="deliv-num">01 Â· THE ROUTE INVENTORY</p>
             <h3>Every call, classified</h3>
-            <p>Every model call in the month, classified by purpose — classification, extraction, reasoning, generation, embedding — with volume, token weight, and cost per route. Most teams have <strong>never seen this table</strong>; most bills hide 15–40% of spend in routes nobody remembers creating.</p>
+            <p>Every model call in the month, classified by purpose â€” classification, extraction, reasoning, generation, embedding â€” with volume, token weight, and cost per route. Most teams have <strong>never seen this table</strong>; most bills hide 15â€“40% of spend in routes nobody remembers creating.</p>
           </div>
           <div class="deliv-card">
-            <p class="deliv-num">02 · THE ROUTING AUDIT</p>
+            <p class="deliv-num">02 Â· THE ROUTING AUDIT</p>
             <h3>The right model per route</h3>
-            <p>The research's biggest single lever, applied to your calls: cheap models where the task is classification, capable models only where reasoning lives — plus the <strong>caching and prefix-stability analysis</strong> that turns repeated prompts into fixed costs, and the dead-call and duplicate-call detection nobody ran.</p>
+            <p>The research's biggest single lever, applied to your calls: cheap models where the task is classification, capable models only where reasoning lives â€” plus the <strong>caching and prefix-stability analysis</strong> that turns repeated prompts into fixed costs, and the dead-call and duplicate-call detection nobody ran.</p>
           </div>
           <div class="deliv-card">
-            <p class="deliv-num">03 · THE RENEGOTIATION PACK</p>
+            <p class="deliv-num">03 Â· THE RENEGOTIATION PACK</p>
             <h3>Your leverage, on paper</h3>
-            <p>Provider-by-provider comparison at your actual volumes, the volume tiers you already qualify for and aren't on, and the <strong>committed-use math</strong> in your favor. You take this into the renewal call yourself — it's your bill and your leverage.</p>
+            <p>Provider-by-provider comparison at your actual volumes, the volume tiers you already qualify for and aren't on, and the <strong>committed-use math</strong> in your favor. You take this into the renewal call yourself â€” it's your bill and your leverage.</p>
           </div>
           <div class="deliv-card">
-            <p class="deliv-num">04 · THE IMPLEMENTATION PLAN</p>
+            <p class="deliv-num">04 Â· THE IMPLEMENTATION PLAN</p>
             <h3>Engineer-ready, vendor-free</h3>
-            <p>Every identified lever as a task in <strong>your stack</strong> — config changes, route switches, cache settings — with per-lever savings projections and confidence bands, sequenced by payback speed. Hand it to one engineer; no Opsynta dependency, no follow-on clause.</p>
+            <p>Every identified lever as a task in <strong>your stack</strong> â€” config changes, route switches, cache settings â€” with per-lever savings projections and confidence bands, sequenced by payback speed. Hand it to one engineer; no Opsynta dependency, no follow-on clause.</p>
           </div>
         </div>
       </div>
@@ -261,12 +267,12 @@
     <!-- ============ FIVE LEVERS ============ -->
     <section class="section" id="levers">
       <div class="container">
-        <p class="section-tag">Where the 30–60% actually hides</p>
+        <p class="section-tag">Where the 30â€“60% actually hides</p>
         <h2 class="display">Five levers. The autopsy pulls all five.</h2>
         <div style="margin-top: 22px;">
           <div class="vert-row">
             <p class="vert-name">Routing</p>
-            <p class="vert-seam"><strong>The biggest lever in the research.</strong> Capable models doing classification work is the single most common overspend — the audit shows exactly which routes to downgrade and what it saves at your volumes.</p>
+            <p class="vert-seam"><strong>The biggest lever in the research.</strong> Capable models doing classification work is the single most common overspend â€” the audit shows exactly which routes to downgrade and what it saves at your volumes.</p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Caching</p>
@@ -274,7 +280,7 @@
           </div>
           <div class="vert-row">
             <p class="vert-name">Dead calls</p>
-            <p class="vert-seam"><strong>Nobody remembers creating these routes.</strong> Duplicate calls, abandoned features still calling, test traffic in production — every bill carries some, and the inventory makes them visible and deletable.</p>
+            <p class="vert-seam"><strong>Nobody remembers creating these routes.</strong> Duplicate calls, abandoned features still calling, test traffic in production â€” every bill carries some, and the inventory makes them visible and deletable.</p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Prompt weight</p>
@@ -282,7 +288,7 @@
           </div>
           <div class="vert-row">
             <p class="vert-name">Contract</p>
-            <p class="vert-seam"><strong>You already qualify for tiers you're not on.</strong> The renegotiation pack turns your usage into leverage — the floor every provider has and no mid-market customer knows they've hit.</p>
+            <p class="vert-seam"><strong>You already qualify for tiers you're not on.</strong> The renegotiation pack turns your usage into leverage â€” the floor every provider has and no mid-market customer knows they've hit.</p>
           </div>
         </div>
       </div>
@@ -297,15 +303,15 @@
           <div class="day-row">
             <p class="day-tag">DAY 01</p>
             <div class="day-body">
-              <h4>Bill ingestion — the body arrives</h4>
-              <p>Provider invoices, usage exports, API logs — plus one interview with the engineer who owns the bill. The story of the bill (why each route exists) and the paper of the bill (what each route costs) rarely agree. That's the first finding.</p>
+              <h4>Bill ingestion â€” the body arrives</h4>
+              <p>Provider invoices, usage exports, API logs â€” plus one interview with the engineer who owns the bill. The story of the bill (why each route exists) and the paper of the bill (what each route costs) rarely agree. That's the first finding.</p>
             </div>
           </div>
           <div class="day-row">
             <p class="day-tag">DAY 02</p>
             <div class="day-body">
               <h4>The route inventory</h4>
-              <p>Every model call classified by purpose — classification, extraction, reasoning, generation, embedding — with volume and cost per route. The table most teams have never seen of their own spend.</p>
+              <p>Every model call classified by purpose â€” classification, extraction, reasoning, generation, embedding â€” with volume and cost per route. The table most teams have never seen of their own spend.</p>
             </div>
           </div>
           <div class="day-row">
@@ -319,14 +325,14 @@
             <p class="day-tag">DAY 04</p>
             <div class="day-body">
               <h4>Savings quantification</h4>
-              <p>Per-lever savings projections with confidence bands — not a single heroic number, a distribution you can defend — plus the renegotiation and provider-comparison pack built at your real volumes.</p>
+              <p>Per-lever savings projections with confidence bands â€” not a single heroic number, a distribution you can defend â€” plus the renegotiation and provider-comparison pack built at your real volumes.</p>
             </div>
           </div>
           <div class="day-row">
             <p class="day-tag">DAY 05</p>
             <div class="day-body">
               <h4>Handoff and readout</h4>
-              <p>The implementation plan written in your stack, an engineer walk-through so nothing is ambiguous, and a 60-minute recorded readout: the levers, the payback order, and — only if you want it — the Growth bridge where the deeper build is the follow-on.</p>
+              <p>The implementation plan written in your stack, an engineer walk-through so nothing is ambiguous, and a 60-minute recorded readout: the levers, the payback order, and â€” only if you want it â€” the Growth bridge where the deeper build is the follow-on.</p>
             </div>
           </div>
         </div>
@@ -336,21 +342,21 @@
     <!-- ============ PRICING ============ -->
     <section class="section" id="price">
       <div class="container">
-        <p class="section-tag">One price · one bill · one guarantee</p>
+        <p class="section-tag">One price Â· one bill Â· one guarantee</p>
         <h2 class="display">$2,500. Fixed. Savings guaranteed.</h2>
         <div class="price-panel">
-          <p class="price-figure">$2,500 <span>fixed · 5 working days</span></p>
+          <p class="price-figure">$2,500 <span>fixed Â· 5 working days</span></p>
           <div class="price-cols">
             <ul class="price-notes">
-              <li><strong>The written guarantee: identified savings exceed the fee within 90 days of implementation — or your next diagnostic is free.</strong> The guarantee pays in service, not cash, and the findings are quantified with confidence bands before anyone implements anything.</li>
-              <li><strong>The full $2,500 credits toward a Growth engagement ($4,000) started within 60 days</strong> — the audit becomes the first payment on the deeper build it prescribes.</li>
-              <li><strong>At a $2,000 monthly bill, a 30% finding repays the fee in under five months</strong> — the buyer's math is a delay, not a cost. At $10K, it repays in five weeks.</li>
+              <li><strong>The written guarantee: identified savings exceed the fee within 90 days of implementation â€” or your next diagnostic is free.</strong> The guarantee pays in service, not cash, and the findings are quantified with confidence bands before anyone implements anything.</li>
+              <li><strong>The full $2,500 credits toward a Growth engagement ($4,000) started within 60 days</strong> â€” the audit becomes the first payment on the deeper build it prescribes.</li>
+              <li><strong>At a $2,000 monthly bill, a 30% finding repays the fee in under five months</strong> â€” the buyer's math is a delay, not a cost. At $10K, it repays in five weeks.</li>
               <li><strong>Two autopsies per week, maximum.</strong> The founder performs every one. Capacity is capped so the numbers stay worth defending.</li>
               <li>100% prepaid. Your table is reserved the moment the invoice is paid.</li>
             </ul>
             <aside class="price-anchor">
               <span class="mono">The alternative</span>
-              The bill keeps compounding: <strong>60–90% overspend ratios</strong> reported at enterprise scale apply at yours, unsupervised — every month. The named consultancies that audit this charge from <strong>$15,000 against $20K+/month spenders</strong>; below that floor, the market's answer has been "absorb it." This is the product that ends that sentence.
+              The bill keeps compounding: <strong>60â€“90% overspend ratios</strong> reported at enterprise scale apply at yours, unsupervised â€” every month. The named consultancies that audit this charge from <strong>$15,000 against $20K+/month spenders</strong>; below that floor, the market's answer has been "absorb it." This is the product that ends that sentence.
             </aside>
           </div>
         </div>
@@ -361,9 +367,9 @@
     <section class="section" id="founder">
       <div class="container">
         <div class="founder-note">
-          <p>I kept meeting the same company: 40 to 400 people, an AI product that works, a bill between $1,000 and $20,000 a month that nobody owns — and no seller, because the LLM-cost firms floor at $20K spend and the "AI optimization" tools assume an ML team that mid-market companies don't have. The savings research says 30 to 60 percent is sitting there. The market just declined to serve it.</p>
-          <p>So this is the audit for the ignored middle. I run it personally, I read your API logs against your invoices myself, and the implementation plan that comes back is written for your engineer — not for a retainer with me. If the honest finding is "your bill is already tight," the confidence bands will say so, and that verdict is worth the fee too. The refusal is the credential.</p>
-          <p class="founder-sig">MUHAMMAD FAYD · FOUNDER, OPSYNTA ENGINE</p>
+          <p>I kept meeting the same company: 40 to 400 people, an AI product that works, a bill between $1,000 and $20,000 a month that nobody owns â€” and no seller, because the LLM-cost firms floor at $20K spend and the "AI optimization" tools assume an ML team that mid-market companies don't have. The savings research says 30 to 60 percent is sitting there. The market just declined to serve it.</p>
+          <p>So this is the audit for the ignored middle. I run it personally, I read your API logs against your invoices myself, and the implementation plan that comes back is written for your engineer â€” not for a retainer with me. If the honest finding is "your bill is already tight," the confidence bands will say so, and that verdict is worth the fee too. The refusal is the credential.</p>
+          <p class="founder-sig">MUHAMMAD FAYD Â· FOUNDER, OPSYNTA ENGINE</p>
         </div>
       </div>
     </section>
@@ -374,38 +380,38 @@
         <p class="section-tag">Questions you should ask</p>
         <h2 class="display">Straight answers.</h2>
         <div style="margin-top: 24px;">
-          <div class="faq-item">
+          <details class="faq-item">
             <summary>Isn't this just "switch to a cheaper model"?</summary>
-            <p class="faq-a">If it were, the bill would already be fixed — everyone knows cheaper models exist. The work is the <strong>inventory</strong>: which of your routes can downgrade without degrading output, which can't, which calls shouldn't exist at all, what your repetition is worth in cache, and what your volumes earn at the negotiating table. "Switch models" is one line in the plan. The other lines are where the money is.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">If it were, the bill would already be fixed â€” everyone knows cheaper models exist. The work is the <strong>inventory</strong>: which of your routes can downgrade without degrading output, which can't, which calls shouldn't exist at all, what your repetition is worth in cache, and what your volumes earn at the negotiating table. "Switch models" is one line in the plan. The other lines are where the money is.</p>
+          </details>
+          <details class="faq-item">
             <summary>We already use a routing / optimization tool. Why pay you?</summary>
-            <p class="faq-a">Then the autopsy is cheaper for you than for anyone: I audit <strong>what the tool is actually doing against your invoices</strong> — routes it routes badly, defaults it shipped with, savings it claims versus savings your bills show. Optimization tools are one more layer nobody checks. If the tool is genuinely earning its fee, the verdict says so, and you've bought confirmation for less than a month of your bill.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">Then the autopsy is cheaper for you than for anyone: I audit <strong>what the tool is actually doing against your invoices</strong> â€” routes it routes badly, defaults it shipped with, savings it claims versus savings your bills show. Optimization tools are one more layer nobody checks. If the tool is genuinely earning its fee, the verdict says so, and you've bought confirmation for less than a month of your bill.</p>
+          </details>
+          <details class="faq-item">
             <summary>How does the savings guarantee actually work?</summary>
-            <p class="faq-a">In writing, at booking: <strong>the identified savings — the per-lever projections your engineer implements — exceed the $2,500 fee within 90 days of implementation, or your next diagnostic of any type is free.</strong> The projections carry confidence bands precisely so the guarantee is defensible: I don't promise heroics, I promise the distribution, and the distribution is on your side.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">In writing, at booking: <strong>the identified savings â€” the per-lever projections your engineer implements â€” exceed the $2,500 fee within 90 days of implementation, or your next diagnostic of any type is free.</strong> The projections carry confidence bands precisely so the guarantee is defensible: I don't promise heroics, I promise the distribution, and the distribution is on your side.</p>
+          </details>
+          <details class="faq-item">
             <summary>What do you need from us?</summary>
-            <p class="faq-a">About three hours of team time across the week: the Day-1 interview with whoever owns the bill (or whoever admits to owning it), one engineer reachable for questions, and access to the paper — provider invoices, usage exports, API logs, the current config. <strong>If the bill has no owner, that fact is already a finding</strong>, and it usually points at the dead-call lever.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">About three hours of team time across the week: the Day-1 interview with whoever owns the bill (or whoever admits to owning it), one engineer reachable for questions, and access to the paper â€” provider invoices, usage exports, API logs, the current config. <strong>If the bill has no owner, that fact is already a finding</strong>, and it usually points at the dead-call lever.</p>
+          </details>
+          <details class="faq-item">
             <summary>Why $2,500?</summary>
-            <p class="faq-a">It matches the market's verified diagnostic floor — the cheapest credible audit band in the research ($2,500–$5,000) — while the consultancies above it won't take a bill under $20K/month at all. At your likely spend, a 30% finding repays the fee in weeks, so the price reads as <strong>a delay on savings, not a cost</strong>. And the full fee credits to a Growth start within 60 days if you want the deeper build.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">It matches the market's verified diagnostic floor â€” the cheapest credible audit band in the research ($2,500â€“$5,000) â€” while the consultancies above it won't take a bill under $20K/month at all. At your likely spend, a 30% finding repays the fee in weeks, so the price reads as <strong>a delay on savings, not a cost</strong>. And the full fee credits to a Growth start within 60 days if you want the deeper build.</p>
+          </details>
+          <details class="faq-item">
             <summary>Is three hours of access enough to see everything?</summary>
-            <p class="faq-a">Yes — because the paper trail carries it. Invoices, usage exports, and API logs are the body; the interviews are the coroner's context. Where logs are missing (a provider exports poorly, a route predates the current team), the audit flags the gap and <strong>prices the unknown</strong> — an honest "this lever is worth $X–$Y, instrument route Z to tighten it" beats a fabricated number, and fabrication is what the confidence bands exist to prevent.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">Yes â€” because the paper trail carries it. Invoices, usage exports, and API logs are the body; the interviews are the coroner's context. Where logs are missing (a provider exports poorly, a route predates the current team), the audit flags the gap and <strong>prices the unknown</strong> â€” an honest "this lever is worth $Xâ€“$Y, instrument route Z to tighten it" beats a fabricated number, and fabrication is what the confidence bands exist to prevent.</p>
+          </details>
+          <details class="faq-item">
             <summary>What if we're spending more than $20K a month?</summary>
-            <p class="faq-a">Then you have options I don't — the named consultancies will take your call at your spend level, and you should compare them. What the autopsy still offers at your scale: a founder-run, five-day, fixed-price pass with no retainer agenda and a written savings guarantee. Some $30K/month spenders prefer exactly that. But the honest answer is: at your tier, you're not the ignored middle. This product was built for the people below you.</p>
-          </div>
-          <div class="faq-item">
+            <p class="faq-a">Then you have options I don't â€” the named consultancies will take your call at your spend level, and you should compare them. What the autopsy still offers at your scale: a founder-run, five-day, fixed-price pass with no retainer agenda and a written savings guarantee. Some $30K/month spenders prefer exactly that. But the honest answer is: at your tier, you're not the ignored middle. This product was built for the people below you.</p>
+          </details>
+          <details class="faq-item">
             <summary>Who delivers it, and when can you start?</summary>
-            <p class="faq-a">The founder — personally, which is why capacity is capped at <strong>two autopsies per week</strong>. The next table opens <strong id="faqSlot">Monday</strong>; after that, the following week's slots or the waitlist. Payment is 100% on booking, so your table is reserved the moment the invoice is paid.</p>
-          </div>
+            <p class="faq-a">The founder â€” personally, which is why capacity is capped at <strong>two autopsies per week</strong>. The next table opens <strong id="faqSlot">Monday</strong>; after that, the following week's slots or the waitlist. Payment is 100% on booking, so your table is reserved the moment the invoice is paid.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -418,27 +424,27 @@
         <div style="margin-top: 22px;">
           <div class="vert-row">
             <p class="vert-name">Exploring</p>
-            <p class="vert-seam"><strong>The Deep Map</strong> — one seam, five days, $2,500, board-ready business case · <a href="deepmap.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Deep Map</strong> â€” one seam, five days, $2,500, board-ready business case Â· <a href="deepmap.html">open this door</a></p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Failed</p>
-            <p class="vert-seam"><strong>The Pilot Autopsy</strong> — kill-or-fix verdict on a dead AI pilot, five days, $3,500 · <a href="pilot_autopsy.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Pilot Autopsy</strong> â€” kill-or-fix verdict on a dead AI pilot, five days, $3,500 Â· <a href="pilot_autopsy.html">open this door</a></p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Overspending</p>
-            <p class="vert-seam"><strong>The Inference Autopsy</strong> — one AI bill, five days, $2,500, savings guaranteed · you are here</p>
+            <p class="vert-seam"><strong>The Inference Autopsy</strong> â€” one AI bill, five days, $2,500, savings guaranteed Â· you are here</p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Exposed</p>
-            <p class="vert-seam"><strong>The Shadow Ledger</strong> — shadow-AI and EU AI Act exposure, seven days, $2,900 · <a href="shadow_ledger.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Shadow Ledger</strong> â€” shadow-AI and EU AI Act exposure, seven days, $2,900 Â· <a href="shadow_ledger.html">open this door</a></p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Shipping</p>
-            <p class="vert-seam"><strong>The Agent Autopsy</strong> — pre-launch verification of one AI agent, seven days, $4,500 · <a href="agent_autopsy.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Agent Autopsy</strong> â€” pre-launch verification of one AI agent, seven days, $4,500 Â· <a href="agent_autopsy.html">open this door</a></p>
           </div>
           <div class="vert-row">
             <p class="vert-name">Committed</p>
-            <p class="vert-seam"><strong>The Opsynta Cycle</strong> — standing monthly measurement of your seam, $1,500/mo · <a href="opsynta_cycle.html">open this door</a></p>
+            <p class="vert-seam"><strong>The Opsynta Cycle</strong> â€” standing monthly measurement of your seam, $1,500/mo Â· <a href="opsynta_cycle.html">open this door</a></p>
           </div>
         </div>
       </div>
@@ -448,12 +454,12 @@
     <section class="final-cta" id="book">
       <div class="container">
         <h2>Send the bill.</h2>
-        <p>Email the providers you pay, the rough monthly number, and who owns it — or send it on WhatsApp. The founder reads both directly, replies within a day, and will tell you honestly if your bill is too tight to be worth an autopsy.</p>
+        <p>Email the providers you pay, the rough monthly number, and who owns it â€” or send it on WhatsApp. The founder reads both directly, replies within a day, and will tell you honestly if your bill is too tight to be worth an autopsy.</p>
         <div class="cta-row">
           <a class="btn btn-gold" href="mailto:mohamed.fayd5589@gmail.com?subject=Inference%20Autopsy%20%E2%80%94%20the%20bill&body=Hi%20Muhammad%2C%0A%0AHere%27s%20the%20bill%3A%0A%0ACompany%20%2F%20team%3A%0AProviders%20and%20models%20we%20pay%20for%3A%0ARough%20monthly%20spend%3A%0AWho%20owns%20the%20bill%20internally%3A%0A%0A%E2%80%94%20%5Bname%5D">Send the bill</a>
-          <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp · 01152701025</a>
+          <a class="btn btn-outline" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp Â· +20 115 270 1025</a>
         </div>
-        <p class="slot-line">THE LEVERS, THE PROOF, THE PAYBACK ORDER · Next table opens <b id="slotLine">Monday</b> · $2,500 fixed · savings guaranteed to exceed the fee within 90 days of implementation</p>
+        <p class="slot-line">THE LEVERS, THE PROOF, THE PAYBACK ORDER Â· Next table opens <b id="slotLine">Monday</b> Â· $2,500 fixed Â· savings guaranteed to exceed the fee within 90 days of implementation</p>
       </div>
     </section>
 
@@ -464,8 +470,8 @@
     <div class="container">
       <p class="footer-slogan">If the bill can be <strong>autopsied</strong>, the next invoice is <strong>smaller</strong>.</p>
       <div class="sig-name">
-        <p><span class="peach-strong">Muhammad Fayd</span> · Founder, Opsynta Engine</p>
-        <p><a href="mailto:mohamed.fayd5589@gmail.com">mohamed.fayd5589@gmail.com</a> · <a class="gold-tel" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp 01152701025</a></p>
+        <p><span class="peach-strong">Muhammad Fayd</span> Â· Founder, Opsynta Engine</p>
+        <p><a href="mailto:mohamed.fayd5589@gmail.com">mohamed.fayd5589@gmail.com</a> Â· <a class="gold-tel" href="https://wa.me/201152701025" target="_blank" rel="noopener">WhatsApp +20 115 270 1025</a></p>
       </div>
     </div>
   </footer>
@@ -485,8 +491,8 @@
       if (el && (q.bill || q.spend)) {
         var line = 'YOUR BILL: ';
         if (q.bill) line += q.bill;
-        if (q.spend) line += (q.bill ? ' · ' : '') + '~' + q.spend + '/month';
-        line += ' — bring the invoices, keep the savings.';
+        if (q.spend) line += (q.bill ? ' Â· ' : '') + '~' + q.spend + '/month';
+        line += ' â€” bring the invoices, keep the savings.';
         el.textContent = line;
         el.style.display = 'block';
       }
