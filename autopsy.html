@@ -121,6 +121,57 @@
             <p class="result-fix-body" id="resultFix"></p>
           </div>
 
+          <!-- ===== DEEP MAP CTA (paste-in, self-contained) ===== -->
+          <div class="dm-cta" id="deepMapCta" hidden>
+            <style>
+              .dm-cta{margin:26px 0 4px;padding:26px 28px;border:1px solid rgba(212,175,55,.28);border-radius:14px;background:linear-gradient(165deg,rgba(212,175,55,.08),rgba(16,25,56,.6));}
+              .dm-cta .dm-tag{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#D4AF37;margin:0 0 10px;}
+              .dm-cta h4{font-family:"Playfair Display",Georgia,serif;font-size:24px;line-height:1.2;color:#FAE4CF;margin:0 0 10px;}
+              .dm-cta p{color:rgba(250,228,207,.68);font-size:14.5px;line-height:1.6;margin:0 0 18px;}
+              .dm-cta p strong{color:#FAE4CF;}
+              .dm-cta .dm-btn{display:inline-block;font-family:Inter,sans-serif;font-weight:600;font-size:14.5px;padding:12px 22px;border-radius:9px;text-decoration:none;color:#0A0F23;background:linear-gradient(160deg,#E8C558,#D4AF37);box-shadow:0 10px 26px rgba(212,175,55,.22);}
+              .dm-cta .dm-sub{font-family:"JetBrains Mono",monospace;font-size:11px;color:rgba(250,228,207,.45);margin:12px 0 0 !important;}
+              .dm-cta .dm-sub b{color:#D4AF37;font-weight:600;}
+            </style>
+            <p class="dm-tag">Opsynta · The Deep Map · the paid continuation</p>
+            <h4 id="dmHeadline">Open the seam this score just found.</h4>
+            <p id="dmBody">In five working days, that weakest primitive gets mapped end-to-end on one seam — and returns as a board-ready business case: <strong>the friction quantified in dollars</strong>, the evidence, and a deployment verdict with a fixed success criterion. <strong>$2,500 fixed, credited toward a Growth start within 60 days.</strong></p>
+            <a class="dm-btn" id="dmLink" href="deepmap.html">See the Deep Map → $2,500 · 5 days</a>
+            <p class="dm-sub">MAP FIRST. DEPLOY SECOND. · <b>fee credits to Growth within 60 days</b> · two maps per week</p>
+          </div>
+          <script>
+          (function(){
+            var cta = document.getElementById('deepMapCta');
+            if(!cta) return;
+            function build(){
+              var scoreEl=document.getElementById('resultScore'), weakEl=document.getElementById('resultWeak');
+              var score=scoreEl?scoreEl.textContent.trim():'', weak=weakEl?weakEl.textContent.trim():'';
+              /* forward the original campaign so the Deep Map lead keeps its post attribution */
+              var camp='organic';
+              try{
+                var attr=JSON.parse(localStorage.getItem('opsynta_attr')||'null');
+                var t=attr&&(attr.last||attr.first);
+                if(t&&t.utm_campaign&&t.utm_campaign!=='direct') camp=t.utm_campaign;
+              }catch(e){}
+              var href='deepmap.html?utm_source=site&utm_medium=page&utm_campaign='+encodeURIComponent(camp)+'&utm_content=deepmap_cta';
+              if(score) href+='&score='+encodeURIComponent(score);
+              if(weak)  href+='&primitive='+encodeURIComponent(weak);
+              var link=document.getElementById('dmLink'); if(link) link.setAttribute('href',href);
+              if(weak){
+                var h=document.getElementById('dmHeadline');
+                if(h) h.textContent='“'+weak+'” is where the money leaks. Open it.';
+              }
+              cta.hidden=false;
+            }
+            var res=document.getElementById('quizResult');
+            if(res && !res.hidden){ build(); return; }
+            new MutationObserver(function(){
+              if(!res.hidden){ build(); }
+            }).observe(res,{attributes:true,attributeFilter:['hidden']});
+          })();
+          </script>
+          <!-- ===== /DEEP MAP CTA ===== -->
+
           <div class="result-contact">
             <p class="result-contact-line">Email this map to Muhammad — the founder reads every autopsy directly. It arrives pre-tagged with the post you came from.</p>
             <div class="contact-actions">
